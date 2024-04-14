@@ -1,0 +1,15 @@
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Aeronautical Engineering; Aeronautics & Astronautics', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Aeronautical Engineering; Aeronautics & Astronautics', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Aeronautical Engineering; Aeronautics & Astronautics', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Aeronautical Engineering; Aeronautics & Astronautics', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Aeronautical Engineering; Aeronautics & Astronautics', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'Systems Management']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'Systems Management']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'Systems Management']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'Systems Management']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'Systems Management']}
+{'Space Walks': {'<=': 3.0, '>=': 2.0}, 'Graduate Major': ['Physics', 'Chemistry; Biochemistry; Optometry', 'Computer Science']}
+{'Space Walks': {'<=': 3.0, '>=': 2.0}, 'Graduate Major': ['Physics', 'Chemistry; Biochemistry; Optometry', 'Computer Science']}
+{'Space Walks': {'<=': 3.0, '>=': 2.0}, 'Graduate Major': ['Physics', 'Chemistry; Biochemistry; Optometry', 'Computer Science']}
+{'Space Walks': {'<=': 3.0, '>=': 2.0}, 'Graduate Major': ['Physics', 'Chemistry; Biochemistry; Optometry', 'Computer Science']}
+{'Space Walks': {'<=': 3.0, '>=': 2.0}, 'Graduate Major': ['Physics', 'Chemistry; Biochemistry; Optometry', 'Computer Science']}

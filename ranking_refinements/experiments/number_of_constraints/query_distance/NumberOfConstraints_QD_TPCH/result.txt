@@ -1,0 +1,50 @@
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['EUROPE']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}

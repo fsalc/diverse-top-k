@@ -1,0 +1,15 @@
+{'Space Walks': {'<=': 4.0, '>=': 0.0001}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 4.0, '>=': 0.0001}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 4.0, '>=': 0.0001}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 4.0, '>=': 0.0001}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 4.0, '>=': 0.0001}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics']}

@@ -1,0 +1,20 @@
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering; Medicine', 'Physics', 'Solid State Physics', 'Engineering Science; Astronomy', 'Applied Plasma Physics', 'Chemical Engineering; Medicine', 'Mathematics'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}
+{'Graduate Major': ['Aviation Systems', 'Physics', 'Solid State Physics', 'Cancer Biology', 'Engineering Management'], 'Space Walks': {'<=': 9.9999, '>=': 1.0001}}

@@ -1,0 +1,50 @@
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AFRICA']}
+{'re.NAME': ['AFRICA']}
+{'re.NAME': ['AFRICA']}
+{'re.NAME': ['AFRICA']}
+{'re.NAME': ['AFRICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AFRICA', 'MIDDLE EAST', 'AMERICA']}
+Infeasible
+Infeasible
+Infeasible
+Infeasible
+Infeasible

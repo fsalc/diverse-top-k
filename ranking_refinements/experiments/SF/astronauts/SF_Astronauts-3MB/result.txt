@@ -1,0 +1,15 @@
+{'Space Walks': {'<=': 2.9999999999999987, '>=': 0.0001}, 'Graduate Major': ['Nuclear Physics', 'Medicine; Public Health', 'Physics']}
+{'Space Walks': {'<=': 2.9999999999999987, '>=': 0.0001}, 'Graduate Major': ['Nuclear Physics', 'Medicine; Public Health', 'Physics']}
+{'Space Walks': {'<=': 2.9999999999999987, '>=': 0.0001}, 'Graduate Major': ['Nuclear Physics', 'Medicine; Public Health', 'Physics']}
+{'Space Walks': {'<=': 2.9999999999999987, '>=': 0.0001}, 'Graduate Major': ['Nuclear Physics', 'Medicine; Public Health', 'Physics']}
+{'Space Walks': {'<=': 2.9999999999999987, '>=': 0.0001}, 'Graduate Major': ['Nuclear Physics', 'Medicine; Public Health', 'Physics']}
+{'Space Walks': {'<=': 1.9999, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 1.9999, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 1.9999, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 1.9999, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 1.9999, '>=': 1.0}, 'Graduate Major': ['Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Solid State Physics', 'Aerospace Engineering; Aeronautical & Astronautical Engineering', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Solid State Physics', 'Aerospace Engineering; Aeronautical & Astronautical Engineering', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Solid State Physics', 'Aerospace Engineering; Aeronautical & Astronautical Engineering', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Solid State Physics', 'Aerospace Engineering; Aeronautical & Astronautical Engineering', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Solid State Physics', 'Aerospace Engineering; Aeronautical & Astronautical Engineering', 'Physics']}

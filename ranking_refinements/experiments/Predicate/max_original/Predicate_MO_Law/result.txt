@@ -1,0 +1,10 @@
+{'region_first': ['NW', 'PO', 'GL']}
+{'region_first': ['NW', 'PO', 'GL']}
+{'region_first': ['NW', 'PO', 'GL']}
+{'region_first': ['NW', 'PO', 'GL']}
+{'region_first': ['NW', 'PO', 'GL']}
+{'UGPA': {'>=': 3.9001}}
+{'UGPA': {'>=': 3.9001}}
+{'UGPA': {'>=': 3.9001}}
+{'UGPA': {'>=': 3.9001}}
+{'UGPA': {'>=': 3.9001}}

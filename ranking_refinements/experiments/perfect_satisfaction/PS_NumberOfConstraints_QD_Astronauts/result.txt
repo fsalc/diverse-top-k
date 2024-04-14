@@ -1,0 +1,5 @@
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['No Major', 'Physics', 'Cancer Biology']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['No Major', 'Physics', 'Cancer Biology']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Systems Engineering', 'No Major', 'Physics', 'Cancer Biology']}
+{'Space Walks': {'<=': 3.0, '>=': 0.9999999999999993}, 'Graduate Major': ['Mechanical Engineering', 'Engineering Management', 'Physics', 'Cancer Biology', 'Physical Chemistry', 'Engineering Science; Astronomy']}
+{'Space Walks': {'<=': 3.000000000000001, '>=': 0.9999999999999996}, 'Graduate Major': ['Mechanical Engineering', 'Aeronautics', 'Engineering Management', 'Physics', 'Astronomy', 'Physical Chemistry']}

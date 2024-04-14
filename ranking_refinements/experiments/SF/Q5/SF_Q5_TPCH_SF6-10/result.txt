@@ -1,0 +1,15 @@
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['EUROPE', 'AFRICA']}
+{'re.NAME': ['EUROPE', 'AFRICA']}
+{'re.NAME': ['EUROPE', 'AFRICA']}
+{'re.NAME': ['EUROPE', 'AFRICA']}
+{'re.NAME': ['EUROPE', 'AFRICA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'AMERICA', 'ASIA']}

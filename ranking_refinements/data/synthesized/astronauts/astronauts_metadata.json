@@ -1,0 +1,68 @@
+{
+    "primary_key": "Unnamed: 0",
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "Unnamed: 0": {
+            "sdtype": "id"
+        },
+        "Name": {
+            "sdtype": "name"
+        },
+        "Year": {
+            "sdtype": "numerical"
+        },
+        "Group": {
+            "sdtype": "numerical"
+        },
+        "Status": {
+            "sdtype": "categorical"
+        },
+        "Birth Date": {
+            "sdtype": "datetime",
+            "datetime_format": "%m/%d/%Y"
+        },
+        "Birth Place": {
+            "sdtype": "categorical"
+        },
+        "Gender": {
+            "sdtype": "categorical"
+        },
+        "Alma Mater": {
+            "sdtype": "categorical"
+        },
+        "Undergraduate Major": {
+            "sdtype": "categorical"
+        },
+        "Graduate Major": {
+            "sdtype": "categorical"
+        },
+        "Military Rank": {
+            "sdtype": "categorical"
+        },
+        "Military Branch": {
+            "sdtype": "categorical"
+        },
+        "Space Flights": {
+            "sdtype": "categorical"
+        },
+        "Space Flight (hr)": {
+            "sdtype": "numerical"
+        },
+        "Space Walks": {
+            "sdtype": "numerical"
+        },
+        "Space Walks (hr)": {
+            "sdtype": "numerical"
+        },
+        "Missions": {
+            "sdtype": "categorical"
+        },
+        "Death Date": {
+            "sdtype": "datetime",
+            "datetime_format": "%m/%d/%Y"
+        },
+        "Death Mission": {
+            "sdtype": "categorical"
+        }
+    }
+}

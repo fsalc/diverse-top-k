@@ -1,0 +1,10 @@
+{'region_first': ['GL']}
+{'region_first': ['GL']}
+{'region_first': ['GL']}
+{'region_first': ['GL']}
+{'region_first': ['GL']}
+{'UGPA': {'>=': 4.0}}
+{'UGPA': {'>=': 4.0}}
+{'UGPA': {'>=': 4.0}}
+{'UGPA': {'>=': 4.0}}
+{'UGPA': {'>=': 4.0}}

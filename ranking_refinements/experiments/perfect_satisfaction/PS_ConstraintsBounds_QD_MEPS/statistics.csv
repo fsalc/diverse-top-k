@@ -1,0 +1,3 @@
+no,max_deviation,K,useful_method,deviation,algorithm,COUNT(SEX = 1),COUNT(SEX = 2),COUNT(SEX = 1),COUNT(SEX = 2),,,setup_duration[sec],solver_duration[sec],total_duration[sec]
+0,0,10,QUERY_DISTANCE,0.0,RefinementMethod.MILP_OPT,5,5,5,5,LowerBound,,34.188796541999864,18.276595292000138,52.465391834
+0,0,10,QUERY_DISTANCE,0.0,RefinementMethod.MILP_OPT,5,5,5,5,Combined,,34.295934375000115,61.50226170799988,95.798196083

@@ -1,0 +1,15 @@
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['MIDDLE EAST']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}

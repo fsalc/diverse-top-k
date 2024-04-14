@@ -1,0 +1,50 @@
+{'re.NAME': ['ASIA', 'AFRICA']}
+{'re.NAME': ['ASIA', 'AFRICA']}
+{'re.NAME': ['ASIA', 'AFRICA']}
+{'re.NAME': ['ASIA', 'AFRICA']}
+{'re.NAME': ['ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'ASIA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'AFRICA']}
+{'re.NAME': ['AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+{'re.NAME': ['MIDDLE EAST', 'AMERICA', 'AFRICA']}
+Infeasible
+Infeasible
+Infeasible
+Infeasible
+Infeasible

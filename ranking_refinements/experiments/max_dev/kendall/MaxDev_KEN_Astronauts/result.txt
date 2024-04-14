@@ -1,0 +1,55 @@
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Earth & Planetary Sciences', 'Physics', 'Earth Sciences; Geology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Cancer Biology', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}, 'Graduate Major': ['Chemistry', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0001}, 'Graduate Major': ['Aerospace Engineering', 'No Major', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0}, 'Graduate Major': ['Aerospace Engineering', 'Physics', 'Physics; Business Management']}
+{'Space Walks': {'<=': 10.0, '>=': 0.0}, 'Graduate Major': ['Chemical Engineering; Medicine', 'Space Physics', 'Bioengineering', 'Electrical Engineering; Physical Sciences', 'Engineering Science; Aerospace Engineering', 'Mechanical & Aerospace Engineering', 'Electronics Engineering', 'Mechanical  Engineering; Mechanical  Engineering & Materials Science', 'Meteorology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 10.0, '>=': 0.0}, 'Graduate Major': ['Chemical Engineering; Medicine', 'Space Physics', 'Bioengineering', 'Electrical Engineering; Physical Sciences', 'Engineering Science; Aerospace Engineering', 'Mechanical & Aerospace Engineering', 'Electronics Engineering', 'Mechanical  Engineering; Mechanical  Engineering & Materials Science', 'Meteorology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 10.0, '>=': 0.0}, 'Graduate Major': ['Chemical Engineering; Medicine', 'Space Physics', 'Bioengineering', 'Electrical Engineering; Physical Sciences', 'Engineering Science; Aerospace Engineering', 'Mechanical & Aerospace Engineering', 'Electronics Engineering', 'Mechanical  Engineering; Mechanical  Engineering & Materials Science', 'Meteorology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 10.0, '>=': 0.0}, 'Graduate Major': ['Chemical Engineering; Medicine', 'Space Physics', 'Bioengineering', 'Electrical Engineering; Physical Sciences', 'Engineering Science; Aerospace Engineering', 'Mechanical & Aerospace Engineering', 'Electronics Engineering', 'Mechanical  Engineering; Mechanical  Engineering & Materials Science', 'Meteorology', 'Physics; Business Management']}
+{'Space Walks': {'<=': 10.0, '>=': 0.0}, 'Graduate Major': ['Chemical Engineering; Medicine', 'Space Physics', 'Bioengineering', 'Electrical Engineering; Physical Sciences', 'Engineering Science; Aerospace Engineering', 'Mechanical & Aerospace Engineering', 'Electronics Engineering', 'Mechanical  Engineering; Mechanical  Engineering & Materials Science', 'Meteorology', 'Physics; Business Management']}

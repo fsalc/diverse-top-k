@@ -1,0 +1,15 @@
+{'Graduate Major': ['Engineering Physics; Medicine; Medical Science', 'Electrical Engineering; Aeronautics & Astronautics', 'Space Technology', 'Physics', 'Geophysics; Seismology', 'Chemistry'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering Physics; Medicine; Medical Science', 'Electrical Engineering; Aeronautics & Astronautics', 'Space Technology', 'Physics', 'Geophysics; Seismology', 'Chemistry'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering Physics; Medicine; Medical Science', 'Electrical Engineering; Aeronautics & Astronautics', 'Space Technology', 'Physics', 'Geophysics; Seismology', 'Chemistry'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering Physics; Medicine; Medical Science', 'Electrical Engineering; Aeronautics & Astronautics', 'Space Technology', 'Physics', 'Geophysics; Seismology', 'Chemistry'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Engineering Physics; Medicine; Medical Science', 'Electrical Engineering; Aeronautics & Astronautics', 'Space Technology', 'Physics', 'Geophysics; Seismology', 'Chemistry'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Electrical Engineering', 'Physics'], 'Space Walks': {'<=': 2.9999999999999973, '>=': 1.0001}}
+{'Graduate Major': ['Electrical Engineering', 'Physics'], 'Space Walks': {'<=': 2.9999999999999973, '>=': 1.0001}}
+{'Graduate Major': ['Electrical Engineering', 'Physics'], 'Space Walks': {'<=': 2.9999999999999973, '>=': 1.0001}}
+{'Graduate Major': ['Electrical Engineering', 'Physics'], 'Space Walks': {'<=': 2.9999999999999973, '>=': 1.0001}}
+{'Graduate Major': ['Electrical Engineering', 'Physics'], 'Space Walks': {'<=': 2.9999999999999973, '>=': 1.0001}}
+{'Graduate Major': ['Aerospace Engineering; Electrical Engineering', 'Veterinary Medicine; Public Administration', 'Physics', 'Business Administration; Physiology; Literature; Medicine'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Aerospace Engineering; Electrical Engineering', 'Veterinary Medicine; Public Administration', 'Physics', 'Business Administration; Physiology; Literature; Medicine'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Aerospace Engineering; Electrical Engineering', 'Veterinary Medicine; Public Administration', 'Physics', 'Business Administration; Physiology; Literature; Medicine'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Aerospace Engineering; Electrical Engineering', 'Veterinary Medicine; Public Administration', 'Physics', 'Business Administration; Physiology; Literature; Medicine'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}
+{'Graduate Major': ['Aerospace Engineering; Electrical Engineering', 'Veterinary Medicine; Public Administration', 'Physics', 'Business Administration; Physiology; Literature; Medicine'], 'Space Walks': {'<=': 3.0, '>=': 0.0001}}

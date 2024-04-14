@@ -1,0 +1,45 @@
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}
+{'re.NAME': ['AFRICA', 'ASIA']}

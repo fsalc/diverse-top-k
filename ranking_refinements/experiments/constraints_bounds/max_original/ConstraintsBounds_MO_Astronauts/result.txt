@@ -1,0 +1,20 @@
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Applied Plasma Physics', 'Environmental Science', 'Chemical Engineering; Medicine', 'Solid State Physics', 'Physics', 'Electrical Engineering; Business Administration', 'Medicine', 'Aerospace Engineering; Strategic Studies'], 'Space Walks': {'<=': 3.0, '>=': 2.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.0}}

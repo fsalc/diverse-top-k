@@ -1,0 +1,33 @@
+{
+    "primary_key": "id",
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "id": {
+            "sdtype": "id"
+        },
+        "race": {
+            "sdtype": "categorical"
+        },
+        "sex": {
+            "sdtype": "categorical"
+        },
+        "LSAT": {
+            "sdtype": "numerical"
+        },
+        "UGPA": {
+            "sdtype": "numerical"
+        },
+        "region_first": {
+            "sdtype": "categorical"
+        },
+        "ZFYA": {
+            "sdtype": "numerical"
+        },
+        "sander_index": {
+            "sdtype": "numerical"
+        },
+        "first_pf": {
+            "sdtype": "categorical"
+        }
+    }
+}

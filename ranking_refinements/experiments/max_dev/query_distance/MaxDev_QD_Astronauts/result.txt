@@ -1,0 +1,55 @@
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Engineering Management', 'No Major', 'Earth Sciences; Geology', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautics & Astronautics', 'No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aeronautical Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 1.0}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.9999999999999998}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.9999999999999998}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.9999999999999998}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.9999999999999998}}
+{'Graduate Major': ['Aerospace Engineering', 'Physics'], 'Space Walks': {'<=': 3.0, '>=': 0.9999999999999998}}

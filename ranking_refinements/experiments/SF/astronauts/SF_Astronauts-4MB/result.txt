@@ -1,0 +1,15 @@
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Electrical Engineering; Aeronautics & Astronautics', 'Business Administration; Physiology; Literature; Medicine', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Electrical Engineering; Aeronautics & Astronautics', 'Business Administration; Physiology; Literature; Medicine', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Electrical Engineering; Aeronautics & Astronautics', 'Business Administration; Physiology; Literature; Medicine', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Electrical Engineering; Aeronautics & Astronautics', 'Business Administration; Physiology; Literature; Medicine', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 0.0001}, 'Graduate Major': ['Electrical Engineering; Aeronautics & Astronautics', 'Business Administration; Physiology; Literature; Medicine', 'Physics']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'No Major']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'No Major']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'No Major']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'No Major']}
+{'Space Walks': {'<=': 3.0, '>=': 1.0}, 'Graduate Major': ['Physics', 'No Major']}
+{'Space Walks': {'<=': 2.9998999999999985, '>=': 9.999999999998899e-05}, 'Graduate Major': ['Safety Engineering; Industrial Engineering', 'Nuclear Physics', 'Law', 'Physics']}
+{'Space Walks': {'<=': 2.9998999999999985, '>=': 9.999999999998899e-05}, 'Graduate Major': ['Safety Engineering; Industrial Engineering', 'Nuclear Physics', 'Law', 'Physics']}
+{'Space Walks': {'<=': 2.9998999999999985, '>=': 9.999999999998899e-05}, 'Graduate Major': ['Safety Engineering; Industrial Engineering', 'Nuclear Physics', 'Law', 'Physics']}
+{'Space Walks': {'<=': 2.9998999999999985, '>=': 9.999999999998899e-05}, 'Graduate Major': ['Safety Engineering; Industrial Engineering', 'Nuclear Physics', 'Law', 'Physics']}
+{'Space Walks': {'<=': 2.9998999999999985, '>=': 9.999999999998899e-05}, 'Graduate Major': ['Safety Engineering; Industrial Engineering', 'Nuclear Physics', 'Law', 'Physics']}

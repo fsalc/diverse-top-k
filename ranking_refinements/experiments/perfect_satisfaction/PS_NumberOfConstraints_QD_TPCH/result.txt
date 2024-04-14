@@ -1,0 +1,5 @@
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AMERICA']}
+{'re.NAME': ['AFRICA', 'AMERICA']}

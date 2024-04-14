@@ -1,0 +1,15 @@
+{'Graduate Major': ['Physics; Business Management', 'Physics', 'Operations Research; Space Systems Management'], 'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics', 'Operations Research; Space Systems Management'], 'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics', 'Operations Research; Space Systems Management'], 'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics', 'Operations Research; Space Systems Management'], 'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}}
+{'Graduate Major': ['Physics; Business Management', 'Physics', 'Operations Research; Space Systems Management'], 'Space Walks': {'<=': 2.9999999999999964, '>=': 0.0}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0000000000000027, '>=': 0.9999999999999982}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0000000000000027, '>=': 0.9999999999999982}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0000000000000027, '>=': 0.9999999999999982}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0000000000000027, '>=': 0.9999999999999982}}
+{'Graduate Major': ['No Major', 'Physics'], 'Space Walks': {'<=': 3.0000000000000027, '>=': 0.9999999999999982}}
+{'Graduate Major': ['Cancer Biology', 'Aeronautical Engineering; Aeronautics & Astronautics', 'Public Health; Biochemistry; Medicine; Microbiology', 'Medicine', 'Medicine; Cardiovascular Physiology; Health Informatics; Public Health', 'Physics', 'Electrical Engineering; Business Administration'], 'Space Walks': {'<=': 3.0, '>=': 1.0001}}
+{'Graduate Major': ['Cancer Biology', 'Aeronautical Engineering; Aeronautics & Astronautics', 'Public Health; Biochemistry; Medicine; Microbiology', 'Medicine', 'Medicine; Cardiovascular Physiology; Health Informatics; Public Health', 'Physics', 'Electrical Engineering; Business Administration'], 'Space Walks': {'<=': 3.0, '>=': 1.0001}}
+{'Graduate Major': ['Cancer Biology', 'Aeronautical Engineering; Aeronautics & Astronautics', 'Public Health; Biochemistry; Medicine; Microbiology', 'Medicine', 'Medicine; Cardiovascular Physiology; Health Informatics; Public Health', 'Physics', 'Electrical Engineering; Business Administration'], 'Space Walks': {'<=': 3.0, '>=': 1.0001}}
+{'Graduate Major': ['Cancer Biology', 'Aeronautical Engineering; Aeronautics & Astronautics', 'Public Health; Biochemistry; Medicine; Microbiology', 'Medicine', 'Medicine; Cardiovascular Physiology; Health Informatics; Public Health', 'Physics', 'Electrical Engineering; Business Administration'], 'Space Walks': {'<=': 3.0, '>=': 1.0001}}
+{'Graduate Major': ['Cancer Biology', 'Aeronautical Engineering; Aeronautics & Astronautics', 'Public Health; Biochemistry; Medicine; Microbiology', 'Medicine', 'Medicine; Cardiovascular Physiology; Health Informatics; Public Health', 'Physics', 'Electrical Engineering; Business Administration'], 'Space Walks': {'<=': 3.0, '>=': 1.0001}}

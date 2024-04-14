@@ -1,0 +1,10 @@
+{'Graduate Major': ['Physics', 'Safety Engineering; Industrial Engineering', 'Physics; Business Management']}
+{'Graduate Major': ['Physics', 'Safety Engineering; Industrial Engineering', 'Physics; Business Management']}
+{'Graduate Major': ['Physics', 'Safety Engineering; Industrial Engineering', 'Physics; Business Management']}
+{'Graduate Major': ['Physics', 'Safety Engineering; Industrial Engineering', 'Physics; Business Management']}
+{'Graduate Major': ['Physics', 'Safety Engineering; Industrial Engineering', 'Physics; Business Management']}
+{'Space Walks': {'<=': 0.9999}}
+{'Space Walks': {'<=': 0.9999}}
+{'Space Walks': {'<=': 0.9999}}
+{'Space Walks': {'<=': 0.9999}}
+{'Space Walks': {'<=': 0.9999}}

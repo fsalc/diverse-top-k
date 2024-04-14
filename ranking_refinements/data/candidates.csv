@@ -1,0 +1,9 @@
+Id,Gender,Race,Major,Gpa,Type,Hours
+1,M,Black,CS,3.90,t.c.,100
+2,F,Asian,EE,3.90,g.a.,60
+3,M,White,ME,3.85,t.c.,75
+4,F,White,ME,3.80,g.a.,80
+5,M,White,CS,3.80,r.l.,95
+6,F,Asian,CS,3.75,t.c.,100
+7,F,Black,EE,3.75,t.c.,70
+8,M,Asian,CS,3.70,r.l.,110
