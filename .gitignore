@@ -1,0 +1,5 @@
+**/.DS_Store
+ranking_refinements/data/meps.csv
+ranking_refinements/data/TPCH/SCALE-1
+ranking_refinements/data/synthesized/meps/*.csv
+docker-utils/*.bin
