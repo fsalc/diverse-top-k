@@ -869,7 +869,7 @@ if __name__ == '__main__':
     plot_duration_for_combined_useful_for_each_dataset()
     plot_duration_for_combined_useful_for_each_dataset(True)
     plot_data_size_comparison_per_useful()
-    plot_lineage_classes_comparison_per_useful()
+    # plot_lineage_classes_comparison_per_useful()
     # # plot_algorithm_comparison_per_useful()
     plot_algorithm_comparison_per_dataset()
     plot_algorithm_comparison_per_dataset(True)
