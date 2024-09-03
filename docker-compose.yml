@@ -1,0 +1,15 @@
+services:
+  latex:
+    image: kjarosh/latex:2024.3
+    command: "mkdir /output && pdflatex -output-directory=/output /paper/main.tex && pdflatex -output-directory=/output /paper/main.tex"
+    volumes:
+      - ./paper:/paper
+      - ./figures:/paper/figures
+      - .:/output
+  ranking-refinements:
+    image: rodeo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./figures:/ranking_refinements/ranking_refinements/figures

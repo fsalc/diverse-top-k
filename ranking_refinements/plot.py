@@ -21,7 +21,7 @@ import subprocess
 
 plt.rc('text')
 plt.rc('font', family='serif')
-plt.rc('text', usetex=True)
+plt.rc('text', usetex=False)
 plt.rc('pgf',rcfonts=False)
 # sns.set_palette("Paired")
 # sns.set_palette("deep")
@@ -30,9 +30,6 @@ sns.set_style("whitegrid")
 # sns.palplot(sns.color_palette("deep", 10))
 # sns.palplot(sns.color_palette("Paired", 9))
 plt.tight_layout()
-
-color = ['C0', 'C1', 'C2', 'C3', 'C4']
-plt_title = ["BlueNile", "COMPAS", "Credit Card"]
 
 label = ["Naive", "Optimized"]
 LINE_WIDTH = 5
