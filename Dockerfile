@@ -18,6 +18,9 @@ COPY --from=cplex /opt/cplex /opt/cplex
 WORKDIR /opt/cplex/cplex/python/3.9/x86-64_linux
 RUN python3 setup.py install
 
+# Verify CPLEX installed
+RUN /opt/cplex/cplex/bin/x86-64_linux/cplex -h
+
 WORKDIR /
 COPY . /ranking_refinements
 RUN pip install ranking_refinements/
