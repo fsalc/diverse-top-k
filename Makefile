@@ -10,3 +10,5 @@ paper: experiments
 
 clean:
 	rm -r figures/*
+	docker-compose rm -f
+	docker rmi rodeo:latest
