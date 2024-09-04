@@ -6,9 +6,11 @@ experiments:
 paper: experiments
 	@echo 'Compiling paper with new figures...'
 	docker-compose up latex
-	@echo 'Done! Recompiled paper is at ./paper/main.pdf'
+	mv ./paper/main.pdf .
+	@echo 'Done! Recompiled paper is at ./main.pdf'
 
 clean:
-	rm -r figures/*
+	rm -r ./figures/*
+	rm -f ./main.pdf ./paper/main.blg ./paper/main.aux ./paper/main.log ./paper/main.out ./paper/comment.cut
 	docker-compose rm -f
 	docker rmi rodeo:latest

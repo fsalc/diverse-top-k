@@ -1,11 +1,10 @@
 services:
   latex:
     image: kjarosh/latex:2024.3
-    command: "mkdir /output && pdflatex -output-directory=/output /paper/main.tex && pdflatex -output-directory=/output /paper/main.tex"
+    command: sh -c "pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex"
+    working_dir: /paper
     volumes:
       - ./paper:/paper
-      - ./figures:/paper/figures
-      - .:/output
   ranking-refinements:
     image: rodeo
     build:
