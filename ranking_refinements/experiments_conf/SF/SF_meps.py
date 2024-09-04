@@ -15,6 +15,7 @@ EXPERIMENTS = [
     {
         "name": "SF_MEPS",
         "dataset": "MEPS",
+        "query_label": "data_size",
         "query": Query('meps.csv', label='150'). \
             where(
             Condition('AGE16X', '>=', 25),
@@ -32,6 +33,7 @@ EXPERIMENTS = [
     {
         "name": "SF_MEPS_200",
         "dataset": "MEPS",
+        "query_label": "data_size",
         "query": Query('synthesized/meps/meps_200mb.csv', label='200'). \
             where(
             Condition('AGE16X', '>=', 25),
@@ -49,6 +51,7 @@ EXPERIMENTS = [
     {
         "name": "SF_MEPS_300",
         "dataset": "MEPS",
+        "query_label": "data_size",
         "query": Query('synthesized/meps/meps_300mb.csv', label='300'). \
             where(
             Condition('AGE16X', '>=', 25),
@@ -66,6 +69,7 @@ EXPERIMENTS = [
     {
         "name": "SF_MEPS_400",
         "dataset": "MEPS",
+        "query_label": "data_size",
         "query": Query('synthesized/meps/meps_400mb_test.csv', label='400'). \
             where(
             Condition('AGE16X', '>=', 25),
@@ -83,6 +87,7 @@ EXPERIMENTS = [
     {
         "name": "SF_MEPS_500",
         "dataset": "MEPS",
+        "query_label": "data_size",
         "query": Query('synthesized/meps/meps_500mb.csv', label='500'). \
             where(
             Condition('AGE16X', '>=', 25),
