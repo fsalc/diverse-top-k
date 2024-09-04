@@ -11,6 +11,6 @@ paper: experiments
 
 clean:
 	rm -r ./figures/*
-	rm -f ./main.pdf ./paper/main.blg ./paper/main.aux ./paper/main.log ./paper/main.out ./paper/comment.cut
+	rm -f ./main.pdf ./paper/main.blg ./paper/main.bbl ./paper/main.aux ./paper/main.log ./paper/main.out ./paper/comment.cut
 	docker-compose rm -f
 	docker rmi rodeo:latest
