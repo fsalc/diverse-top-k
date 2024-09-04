@@ -3,6 +3,7 @@
 ## Reproducibility Package
 
 * We containerized our experiments suite in order to ensure the correct dependencies are installed and the proper setup is performed.
+    - Please ensure Docker, docker-compose, and GNU make are all installed on your system
 * In general, a license for IBM CPLEX is required for our implementation. Please ensure to place the `.bin` file of your licensed installer in the `docker-utils` folder, and the scripts will take care of the rest.
 * Some of the datasets are too large to store in this repository. A link will be provided here shortly, or please contact us.
 * In order to run the experiments, generate plots, and recompile the paper, simply run
