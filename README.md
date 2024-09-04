@@ -10,7 +10,7 @@
 ```
 make paper
 ```
-* We expect that the full suite of experiments will take on 24-48 hours depending on hardware setup.
+* We expect that the full suite of experiments will take between 24-48 hours depending on hardware setup.
 * If something goes wrong, please try `make clean && make paper` or feel free to contact us.
 
 ## Structure
