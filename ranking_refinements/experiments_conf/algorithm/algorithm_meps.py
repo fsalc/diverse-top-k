@@ -26,7 +26,7 @@ EXPERIMENTS = [
         "only_lower_bound_constraints": True,
         "max_deviations": [0.5],
         "useful_methods": [UsefulMethod.QUERY_DISTANCE, UsefulMethod.MAX_ORIGINAL, UsefulMethod.KENDALL_DISTANCE],
-        "algorithms": [RefinementMethod.MILP_OPT, RefinementMethod.BRUTE_PROV],
+        "algorithms": [RefinementMethod.MILP_OPT, RefinementMethod.MILP, RefinementMethod.BRUTE_PROV, RefinementMethod.BRUTE],
         "k_list": [10],
         "comparison_criteria": [("runtime [sec]", "algorithm"), ("deviation", "algorithm")],
         "iterations": 10
