@@ -228,12 +228,14 @@ def plot_durations_graphs(x, y_setup, y_solver, y_total, deviations,
     plot_features(index, x, x_label, y_label, title)
     plt.savefig(Path(output_dir, f'{output_name}__{y_label}_by_{x_label}__bar.pdf', bbox_inches='tight', format="pdf"), bbox_inches='tight')
     plt.clf()
+    plt.close()
     # plt.show()
 
     plot_lines_duration_graph(index, y_setup, y_total, color_index, legend_prefix, annotations=deviations, ax=ax)
     plot_features(index, x, x_label, y_label, title)
     plt.savefig(Path(output_dir, f'{output_name}__{y_label}_by_{x_label}__lines.pdf'), bbox_inches='tight', format="pdf")
     plt.clf()
+    plt.close()
     # plt.show()
 
 
@@ -530,6 +532,7 @@ def plot_duration_for_combined_useful_for_each_dataset(log_scale=False):
             plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                         bbox_inches='tight', format="pdf")
             plt.clf()
+            plt.close()
             # plt.show()
 
 
@@ -687,6 +690,7 @@ def plot_algorithm_comparison_per_dataset(log_scale=False):
         plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                     bbox_inches='tight', format="pdf")
         plt.clf()
+        plt.close()
         # plt.show()
 
 def plot_data_size_comparison_per_useful(log_scale=False):
@@ -740,6 +744,7 @@ def plot_data_size_comparison_per_useful(log_scale=False):
         plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                     bbox_inches='tight', format="pdf")
         plt.clf()
+        plt.close()
         # plt.show()
 
 def plot_lineage_classes_comparison_per_useful(log_scale=False):
@@ -791,6 +796,7 @@ def plot_lineage_classes_comparison_per_useful(log_scale=False):
         plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                     bbox_inches='tight', format="pdf")
         plt.clf()
+        plt.close()
         # plt.show()
 
 # def plot_algorithm_comparison(log_scale=False):
