@@ -102,6 +102,6 @@ if __name__ == '__main__':
     
     for dataset in DATASETS:
         df = combine_data_size_stats(dataset, DATASET_SIZES[dataset], DATASET_LINEAGE_CLASSES[dataset])
-        df.to_csv(os.path.join(os.getcwd(), SF_ROOT, dataset, 'statistics_test.csv'))
+        df.to_csv(os.path.join(os.getcwd(), SF_ROOT, dataset, 'statistics.csv'))
     
     print('Successfully aggregated all data size experiments!')
