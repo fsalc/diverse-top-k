@@ -121,7 +121,7 @@ class ExperimentsRunner:
 
                                         try:
                                             refinement, times = refine()
-                                        except TimeoutError:
+                                        except (TimeoutError, MemoryError):
                                             refinement, times = None, (0, 0, 3600)
                                         setup_duration = times[1] - times[0]
                                         solver_duration = times[2] - times[1]
