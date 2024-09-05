@@ -621,7 +621,7 @@ class Ranking(object):
             def powerset(iterable):
                 s = len(iterable)
                 for i in range(1, 1 << s):
-                    yield [iterable[j] for j in range(s) if (i & (1 << s))]
+                    yield [iterable[j] for j in range(s) if (i & (1 << j))]
                 # return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
 
             # Distance setups
@@ -756,7 +756,7 @@ class Ranking(object):
             def powerset(iterable):
                 s = len(iterable)
                 for i in range(1, 1 << s):
-                    yield [iterable[j] for j in range(s) if (i & (1 << s))]
+                    yield [iterable[j] for j in range(s) if (i & (1 << j))]
                 # return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
 
             # Distance setups
