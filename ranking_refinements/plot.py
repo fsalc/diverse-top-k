@@ -620,7 +620,7 @@ def plot_algorithm_comparison_per_dataset(log_scale=False):
         dataset_df = None
         if os.path.exists(path):
             dataset_df = pd.read_csv(path)
-            dataset_df = dataset_df.drop(dataset_df[(dataset_df['total_duration[sec]'] >= 3600) | (dataset_df['total_duration[sec]'] == 0)].index)
+            dataset_df = dataset_df.drop(dataset_df[dataset_df['total_duration[sec]'] >= 3600].index)
         else:
             print(f'Skip {dataset_sign} -- because {path} does not exist!')
 
