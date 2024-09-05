@@ -73,7 +73,7 @@ make clean
 * Please ensure CPLEX is installed, as well as its included Python bindings.
     - See [here](https://www.ibm.com/docs/en/icos/20.1.0?topic=cplex-installing) for instructions on installing CPLEX, and [here](https://www.ibm.com/docs/en/icos/20.1.0?topic=cplex-setting-up-python-api) for instructions on setting up the Python bindings
 * From this directory, run
-```pip install ./ranking_refinements```
+```pip install .```
     - This should install all the necessary dependencies and allow you to use the library.
 
 ### Running the algorithm
