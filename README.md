@@ -6,17 +6,38 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
 ## ① Reproducibility Package
 
+
+### System requirements
+
 * We containerized our experiments suite in order to ensure the correct dependencies are installed and the proper setup is performed.
-    - The host machine should have 16 GB memory, and at least 256 GB of available disk space
-    - Please ensure Docker, docker-compose, and GNU make are all installed on your system
+    - The host machine should have 16 GB memory, and at least 256 GB of available disk space to ensure enough room to build the containers, hold the datasets, etc.
+    - Please ensure Docker, docker-compose, and GNU make are all installed on your system, e.g. on Debian
+
+    ```apt-get install docker docker-compose build-essential```
+
 * In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer in the `docker-utils` folder, and the scripts will take care of the rest.
+
+### Datasets
+
 * Some of the datasets are too large to store in this repository. A link will be provided here shortly, or please contact us.
+
+### Set-up & running experiments
+
 * In order to run the experiments, generate plots, and recompile the paper, simply run
 ```shell
 make paper
 ```
 * We expect that the full suite of experiments will take between 24-48 hours depending on hardware setup.
+* The script runs *all* experiments from which *all data presented in each graph shown in the paper* was collected. 
+* The script will also automatically *generate new plots* from the collected data, and *recompile the paper* with the new figures included. If the script terminates successfully, the paper `main.pdf` should be placed into this directory.
 * If something goes wrong, please try `make clean && make paper` or feel free to contact us.
+
+### Clean-up
+
+* In the case you would like to clean everything up (e.g. starting a fresh run), simply run
+```shell
+make clean
+```
 
 
 ## ② Algorithm Implementation
