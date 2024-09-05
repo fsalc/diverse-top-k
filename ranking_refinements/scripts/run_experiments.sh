@@ -1,42 +1,45 @@
-# echo "Dry run..."
-echo "Running algorithm comparisons...";
+PURPLE='\033[0;35m'
+NORMAL='\033[0m'
+
+# echo -e "${PURPLE}Dry run...${NORMAL}"
+echo -e "Running algorithm comparisons...";
 for EXPERIMENT in ./experiments_conf/algorithm/*.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
 
-echo "Running constraint bounds comparisons...";
+echo -e "Running constraint bounds comparisons...";
 for EXPERIMENT in ./experiments_conf/constraints/constraints_bounds/*.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
 
-echo "Running number of constraints comparisons...";
+echo -e "Running number of constraints comparisons...";
 for EXPERIMENT in ./experiments_conf/constraints/number_of_constraints/*.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
 
-echo "Running k* comparisons...";
+echo -e "Running k* comparisons...";
 for EXPERIMENT in ./experiments_conf/k/*.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
 
-echo "Running epsilon (maximum average deviation) comparisons...";
+echo -e "Running epsilon (maximum average deviation) comparisons...";
 for EXPERIMENT in ./experiments_conf/max_dev/*.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
 
-echo "Running predicate type comparisons...";
+echo -e "Running predicate type comparisons...";
 for EXPERIMENT in ./experiments_conf/predicate/*.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
 
-echo "Running data size comparisons...";
+echo -e "Running data size comparisons...";
 for EXPERIMENT in ./experiments_conf/SF/SF_astronauts.py ./experiments_conf/SF/SF_law.py ./experiments_conf/SF/SF_meps.py ./experiments_conf/SF/SF_q5.py; do
-    echo "Executing $EXPERIMENT...";
+    echo -e "${PURPLE}Executing $EXPERIMENT...${NORMAL}";
     python3 $EXPERIMENT;
 done;
