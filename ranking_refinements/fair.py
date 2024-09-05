@@ -619,6 +619,7 @@ class Ranking(object):
             relevant_attrs = list(protected.union(attrs))
 
             def powerset(iterable):
+                iterable = list(iterable)
                 s = len(iterable)
                 for i in range(1, 1 << s):
                     yield [iterable[j] for j in range(s) if (i & (1 << j))]
@@ -754,6 +755,7 @@ class Ranking(object):
             relevant_attrs = list(protected.union(attrs))
 
             def powerset(iterable):
+                iterable = list(iterable)
                 s = len(iterable)
                 for i in range(1, 1 << s):
                     yield [iterable[j] for j in range(s) if (i & (1 << j))]
