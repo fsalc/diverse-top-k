@@ -8,7 +8,6 @@ from multiprocessing import Process
 
 from ranking_refinements.fair import Ranking, Constraints, Constraint, Group, UsefulMethod, RefinementMethod
 from ranking_refinements.query import Query, Condition
-from ranking_refinements.plot_figure import plot_figure
 
 import numpy as np
 from copy import deepcopy

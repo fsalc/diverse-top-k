@@ -36,7 +36,7 @@ for EXPERIMENT in ./experiments_conf/predicate/*.py; do
 done;
 
 echo "Running data size comparisons...";
-for EXPERIMENT in ./experiments_conf/predicate/SF_astronauts.py ./experiments_conf/predicate/SF_law.py ./experiments_conf/predicate/SF_meps.py ./experiments_conf/predicate/SF_q5.py; do
+for EXPERIMENT in ./experiments_conf/SF/SF_astronauts.py ./experiments_conf/SF/SF_law.py ./experiments_conf/SF/SF_meps.py ./experiments_conf/SF/SF_q5.py; do
     echo "Executing $EXPERIMENT...";
     python3 $EXPERIMENT;
 done;
