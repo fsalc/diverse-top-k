@@ -12,3 +12,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./figures:/ranking_refinements/ranking_refinements/figures
+      - ./results:/ranking_refinements/ranking_refinements/experiments
