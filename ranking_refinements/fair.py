@@ -201,7 +201,15 @@ class Ranking(object):
     def orig_ranked(self, attrs=None, top=None, opt=True):
         # for tpch
         # TODO: refactor
-        quotedRenamed = " ".join([f'"{attr}"' if '.' in attr and ('"' not in attr and "'" not in attr) else attr for attr in self.where.args['this'].sql().split(' ')])
+        def isnumeric(string):
+            try:
+                float(string)
+                return True
+            except ValueError:
+                return False
+
+        # Don't quote numbers that are constants of the predicate, e.g. "3.5"
+        quotedRenamed = " ".join([f'"{attr}"' if '.' in attr and not isnumeric(attr) and ('"' not in attr and "'" not in attr) else attr for attr in self.where.args['this'].sql().split(' ')])
 
         if opt:
             return list(d.sql(f'''
