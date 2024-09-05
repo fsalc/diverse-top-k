@@ -669,7 +669,7 @@ class Ranking(object):
                 for attr in self.conds_attrs(self.numerical()):
                     lb = i.get(f'{attr} >', None) or i.get(f'{attr} >=', None)
                     ub = i.get(f'{attr} <', None) or i.get(f'{attr} <=', None)
-                    if lb and ub and lb > ub:
+                    if lb != None and ub != None and lb > ub:
                         guaranteedEmpty = True
                 if guaranteedEmpty: continue
 
@@ -827,7 +827,7 @@ class Ranking(object):
                 for attr in self.conds_attrs(self.numerical()):
                     lb = i.get(f'{attr} >', None) or i.get(f'{attr} >=', None)
                     ub = i.get(f'{attr} <', None) or i.get(f'{attr} <=', None)
-                    if lb and ub and lb > ub:
+                    if lb != None and ub != None and lb > ub:
                         guaranteedEmpty = True
                 if guaranteedEmpty: continue
 
@@ -836,15 +836,15 @@ class Ranking(object):
                     #check if match
                     match = True
                     for attr in attrs:
-                        if i.get(f'{attr} IN', None) and lineage[attr] not in i.get(f'{attr} IN', None):
+                        if i.get(f'{attr} IN', None) != None and lineage[attr] not in i.get(f'{attr} IN', None):
                             match = False
-                        if i.get(f'{attr} >', None) and lineage[attr] <= i.get(f'{attr} >', None):
+                        if i.get(f'{attr} >', None) != None and lineage[attr] <= i.get(f'{attr} >', None):
                             match = False
-                        if i.get(f'{attr} >=', None) and lineage[attr] < i.get(f'{attr} >=', None):
+                        if i.get(f'{attr} >=', None) != None and lineage[attr] < i.get(f'{attr} >=', None):
                             match = False
-                        if i.get(f'{attr} <', None) and lineage[attr] >= i.get(f'{attr} <', None):
+                        if i.get(f'{attr} <', None) != None and lineage[attr] >= i.get(f'{attr} <', None):
                             match = False
-                        if i.get(f'{attr} <=', None) and lineage[attr] > i.get(f'{attr} <=', None):
+                        if i.get(f'{attr} <=', None) != None and lineage[attr] > i.get(f'{attr} <=', None):
                             match = False
                     #if match, add to priority queue
                     if match:
@@ -876,7 +876,7 @@ class Ranking(object):
                         dist += abs(N[f'{attr} {NUMERIC_OPS[type(predicate)]}'] - i[f'{attr} {NUMERIC_OPS[type(predicate)]}']) / N[f'{attr} {NUMERIC_OPS[type(predicate)]}']
                 elif useful_method == UsefulMethod.MAX_ORIGINAL:
                     intersection = len(set(tuples).intersection(set(original['r'])))
-                    union = len(tuples) + len(original) - intersection
+                    union = len(tuples) + len(original['r']) - intersection
                     dist = 1 - (intersection/union)
                 elif useful_method == UsefulMethod.KENDALL_DISTANCE:
                     union = set(original['r']).union(set(tuples))
