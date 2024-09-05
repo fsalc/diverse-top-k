@@ -6,7 +6,6 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
 ## ① Reproducibility Package
 
-
 ### System requirements
 
 * We containerized our experiments suite in order to ensure the correct dependencies are installed and the proper setup is performed.
@@ -15,7 +14,9 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
     ```apt-get install docker docker-compose build-essential```
 
-* In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer in the `docker-utils` folder, and the scripts will take care of the rest.
+* In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer in the [docker-utils](docker-utils) folder, and the scripts will take care of the rest.
+
+* Otherwise, no special configuration is required for the system -- anything special is handled by our containers.
 
 ### Datasets
 
@@ -31,6 +32,12 @@ make paper
 * The script runs *all* experiments from which *all data presented in each graph shown in the paper* was collected. 
 * The script will also automatically *generate new plots* from the collected data, and *recompile the paper* with the new figures included. If the script terminates successfully, the paper `main.pdf` should be placed into this directory.
 * If something goes wrong, please try `make clean && make paper` or feel free to contact us.
+
+### Modifying experiments
+
+* All experiments are stored as configuration files in [ranking_refinements/experiments_conf](ranking_refinements/experiments_conf).
+* The queries, constraints, maximum average deviations $\varepsilon$, methods/algorithms, $k^*$, and other parameters may be controlled by these configuration files.
+* Adding a new experiment configuration file requires modifying [ranking_refinements/scripts/run_experiments.sh](ranking_refinements/scripts/run_experiments.sh) in order for it to be run with the suite.
 
 ### Clean-up
 
