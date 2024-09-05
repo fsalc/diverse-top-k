@@ -610,10 +610,11 @@ class Ranking(object):
             attrs = self.conds_attrs(self.conds())
             relevant_attrs = list(protected.union(attrs))
 
-            # From Python 3 documentation:
             def powerset(iterable):
-                s = list(iterable)
-                return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
+                s = len(iterable)
+                for i in range(1, 1 << s):
+                    yield [iterable[j] for j in range(s) if (i & (1 << s))]
+                # return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
 
             # Distance setups
             C = defaultdict(list)
@@ -744,10 +745,11 @@ class Ranking(object):
             attrs = self.conds_attrs(self.conds())
             relevant_attrs = list(protected.union(attrs))
 
-            # From Python 3 documentation:
             def powerset(iterable):
-                s = list(iterable)
-                return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
+                s = len(iterable)
+                for i in range(1, 1 << s):
+                    yield [iterable[j] for j in range(s) if (i & (1 << s))]
+                # return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
 
             # Distance setups
             C = defaultdict(list)
