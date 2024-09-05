@@ -6,7 +6,12 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
 ## ① Reproducibility Package
 
-### System requirements
+```
+          ❶                           ❷                           ❸                       
+  Install dependencies         Download datasets         Run experiments suite
+```
+
+### ❶ Install dependencies
 
 * We containerized our experiments suite in order to ensure the correct dependencies are installed and the proper setup is performed.
     - The host machine should have 16 GB memory, and at least 256 GB of available disk space to ensure enough room to build the containers, hold the datasets, etc.
@@ -14,15 +19,19 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
     ```apt-get install docker docker-compose build-essential```
 
-* In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer in the [docker-utils](docker-utils) folder, and the scripts will take care of the rest.
+> [!IMPORTANT]
+> In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer **(for Linux x86-64)** in the [docker-utils](docker-utils) folder, and the scripts will take care of the rest.
+
+> [!NOTE]
+>  For compatability, we recommend IBM ILOG CPLEX Optimization Studio V22.1.1 (part no. `G0798ML`). From it, download IBM ILOG CPLEX Optimization Studio V22.1.1 for Linux x86-64.
 
 * Otherwise, no special configuration is required for the system -- anything special is handled by our containers.
 
-### Datasets
+### ❷ Datasets
 
 * Some of the datasets are too large to store in this repository. A link will be provided here shortly, or please contact us.
 
-### Set-up & running experiments
+### ❸ Running experiments, generating figures, & recompiling the paper
 
 * In order to run the experiments, generate plots, and recompile the paper, simply run
 ```shell
@@ -33,19 +42,22 @@ make paper
 * The script will also automatically *generate new plots* from the collected data, and *recompile the paper* with the new figures included. If the script terminates successfully, the paper `main.pdf` should be placed into this directory.
 * If something goes wrong, please try `make clean && make paper` or feel free to contact us.
 
-### Modifying experiments
+### Appendix
+
+#### Modifying experiments
 
 * All experiments are stored as configuration files in [ranking_refinements/experiments_conf](ranking_refinements/experiments_conf).
 * The queries, constraints, maximum average deviations $\varepsilon$, methods/algorithms, $k^*$, and other parameters may be controlled by these configuration files.
 * Adding a new experiment configuration file requires modifying [ranking_refinements/scripts/run_experiments.sh](ranking_refinements/scripts/run_experiments.sh) in order for it to be run with the suite.
 
-### Clean-up
+#### Clean-up
 
 * In the case you would like to clean everything up (e.g. starting a fresh run), simply run
 ```shell
 make clean
 ```
 
+---
 
 ## ② Algorithm Implementation
 
