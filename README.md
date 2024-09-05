@@ -12,7 +12,7 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 * In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer in the `docker-utils` folder, and the scripts will take care of the rest.
 * Some of the datasets are too large to store in this repository. A link will be provided here shortly, or please contact us.
 * In order to run the experiments, generate plots, and recompile the paper, simply run
-```
+```shell
 make paper
 ```
 * We expect that the full suite of experiments will take between 24-48 hours depending on hardware setup.
@@ -40,7 +40,7 @@ make paper
 * At the end of `fair.py`, there are a few example cases with various datasets
 * Let's look at one example scenario in order to illustrate the usage of our library:
 
-``` 
+```python
 from ranking_refinements.fair import Ranking, Constraints, Constraint, Group, UsefulMethod, RefinementMethod
 
 constraints = Constraints(
@@ -71,4 +71,5 @@ ranking = Ranking('SELECT * FROM "data/candidates.csv" WHERE ("Major" = \'CS\' O
     - For our example, we would call `ranking.refine(constraints)`
     - `refine` can be configured with many parameters, such as
         + `max_deviation`: Maximum average deviation allowed from the constraint set
-        + `method`: 
+        + `useful_method`: One of `UsefulMethod.QUERY_DISTANCE, UsefulMethod.MAX_ORIGINAL, UsefulMethod.KENDALL_DISTANCE`
+        + `method`: One of `RefinementMethod.MILP_OPT, RefinementMethod.MILP, RefinementMethod.BRUTE_PROV, RefinementMethod.BRUTE`
