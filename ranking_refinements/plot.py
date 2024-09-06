@@ -412,7 +412,7 @@ STATISTICS = {
                          'statistics.csv'),
         }
     },
-    'predicate_kind': {
+    'predicate_type': {
         'JAC': {
             'Astr': Path('.', 'experiments', 'Predicate', 'max_original',
                          'Predicate_MO_Astronauts', 'statistics.csv'),
@@ -476,7 +476,7 @@ class GraphKind(Enum):
 
 GRAPH_KIND_TO_LABEL = {
     GraphKind.LINE: ['K', 'max_deviation', 'number_of_constraints'],
-    GraphKind.BAR: ['constraints_bounds', 'predicate_kind']
+    GraphKind.BAR: ['constraints_bounds', 'predicate_type']
 }
 
 
@@ -555,7 +555,7 @@ READABLE_LABLES = {
     'max_deviation': 'Maximum deviation ($\\varepsilon$)',
     'number_of_constraints': 'Number of Constraints',
     'constraints_bounds': 'Types of Constraints',
-    'predicate_kind': 'Type of Predicates',
+    'predicate_type': 'Type of Predicates',
     'duration[sec]': 'Duration [sec]'
 }
 
