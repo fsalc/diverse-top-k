@@ -235,14 +235,13 @@ class Ranking(object):
             ).fetchnumpy().items()}
             return self.cached
         
-        sq = sqlglot.select('*').from_(self.from_)
+        sq = sqlglot.select('*').from_(self.from_).order_by(self.utility)
         for join in self.joins:
             sq = sq.join(join)
         q = sqlglot.subquery(sq).select('*').select('ROW_NUMBER() OVER () - 1 AS r')
 
-
         self.cached = {k: v.filled() for k, v in d.sql(
-            q.order_by(self.utility).sql()
+            q.sql()
         ).fetchnumpy().items()}
         return self.cached
 
