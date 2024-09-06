@@ -70,7 +70,7 @@ EXPERIMENTS = [
         "name": "SF_MEPS_400",
         "dataset": "MEPS",
         "query_label": "data_size",
-        "query": Query('synthesized/meps/meps_400mb_test.csv', label='400'). \
+        "query": Query('synthesized/meps/meps_400mb.csv', label='400'). \
             where(
             Condition('AGE16X', '>=', 25),
             Condition('FAMS1231', '>=', 4),
