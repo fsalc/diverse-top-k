@@ -134,7 +134,11 @@ class ExperimentsRunner:
 
                                         try:
                                             refinement, times = refine()
-                                        except (TimeoutError, MemoryError):
+                                        except TimeoutError:
+                                            print('WARN\ttimeout exceeded')
+                                            refinement, times = None, (0, 0, 3600)
+                                        except MemoryError:
+                                            print('WARN\tmemory limit exceeded')
                                             refinement, times = None, (0, 0, 3600)
                                         setup_duration = times[1] - times[0]
                                         solver_duration = times[2] - times[1]
