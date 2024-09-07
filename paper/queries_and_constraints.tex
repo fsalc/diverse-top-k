@@ -1,0 +1,28 @@
+\begin{table*}[t!]
+    \centering
+    \footnotesize
+    \caption{Queries and constraints}
+    \scalebox{0.72}{
+        \begin{tabular}{lclcl}
+        \hline
+        \textbf{Dataset} & \textbf{Query} & \multicolumn{1}{c}{\textbf{Predicates}} & \textbf{Order by (DESC)} & \multicolumn{1}{c}{\textbf{Constraints}}\\ \hline\hline
+        Astronauts & $Q_A$ & 
+        \begin{tabular}{l@{}}\texttt{"Graduate Major" = 'Physics'}\\ \texttt{AND "Space Walks" <= 3}\\ \texttt{AND "Space Walks" >= 1} \end{tabular}  
+        &{\tt "Space Flight (hrs)"}&\begin{tabular}{@{}ll@{}}
+            (1) $\lb{Gender='F'}{k} = \frac{k}{2}$ & (4) $\lb{Status='Management'}{k} = \frac{k}{5}$ \\ (2) $\lb{Gender='M'}{k} = \frac{k}{2}$ & (5) $\lb{Status='Retired'}{k} = \frac{k}{5}$ \\ (3) $\lb{Status='Active'}{k} = \frac{k}{5}$ &
+        \end{tabular}\\
+        \hline
+        Law Students & $Q_L$ & \begin{tabular}{l@{}}\texttt{Region = 'GL'}\\\texttt{AND GPA <= 4.0}\\\texttt{AND GPA >= 3.5}\end{tabular}& {\tt LSAT}&\begin{tabular}{@{}ll@{}}
+            (1) $\lb{Sex='F'}{k} = \frac{k}{2}$ & (4) $\lb{Race='White'}{k} = \frac{k}{5}$ \\ (2) $\lb{Sex='M'}{k} = \frac{k}{2}$ & (5) $\lb{Race='Asian'}{k} = \frac{k}{5}$ \\ (3) $\lb{Race='Black'}{k} = \frac{k}{5}$ &
+        \end{tabular}\\
+       \hline
+        MEPS & $Q_M$ & \begin{tabular}{l@{}}\texttt{Age > 22}\\\texttt{AND "Family Size" >= 4}\end{tabular}& {\tt Utilization}&\begin{tabular}{@{}ll@{}}
+            (1) $\lb{Sex='F'}{k} = \frac{k}{2}$ & (4) $\lb{Race='Black'}{k} = \frac{k}{5}$ \\ (2) $\lb{Sex='M'}{k} = \frac{k}{2}$ & (5) $\lb{Race='White'}{k} = \frac{k}{5}$ \\ (3) $\lb{Race='Asian'}{k} = \frac{k}{5}$ &
+        \end{tabular}\\ \hline
+        TPC-H & $Q_5$ & \begin{tabular}{l@{}}\texttt{Region = 'ASIA'}\end{tabular} & {\tt Revenue}& \begin{tabular}{@{}ll@{}}
+            (1) $\lb{OrderPrio='5-LOW'}{k} = \frac{k}{2}$ & (4) $\lb{MktSeg='BUILDING'}{k} = \frac{k}{5}$ \\ (2) $\lb{OrderPrio='3-MEDIUM'}{k} = \frac{k}{5}$ & (5) $\lb{MktSeg='MACHINERY'}{k} = \frac{k}{5}$ \\ (3) $\lb{MktSeg='AUTOMOBILE'}{k} = \frac{k}{5}$ &
+        \end{tabular}\\ \hline
+        \end{tabular}
+    }
+    \label{tab:queriesAndConstraints}
+\end{table*}

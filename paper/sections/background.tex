@@ -1,0 +1,169 @@
+\section{Problem Overview}
+\label{sec:background}
+
+In this paper, we consider the class of conjunctive Select\footnote{{\tt DISTINCT} is supported, and is used to select individuals uniquely if they should not appear more than once in the output.}-Project-Join (SPJ)\footnote{We note that the system may be extended easily to handle unions, but we omit its description here due to space constraints.} queries with an \texttt{ORDER BY}~$s$ clause, generating a ranked list of tuples, where $s$ is a \emph{score function} of a single tuple $t$.  
+A query $Q$ may have numerical and categorical selection predicates, denoted $\num(Q)$ and $\cat(Q)$, respectively. Numerical predicates are of the form $A \diamond C$, where $A$ is a numerical attribute, $C \in \mathbb{R}$, and $\diamond \in \{<, \leq,=, >, \geq \}$. %
+Categorical predicates are of the form $\bigvee_{c \in C} A = c$, where $A$ is a categorical attribute and $C$ is a set of constants from the domain of $A$. Selection operators combine predicates by taking their conjunction. We use $\conds(Q)$ to denote the set of attributes appearing in the selection predicates of $Q.$
+In the rest of the paper, we simply use query to refer to such queries.
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Preliminaries}
+\label{sec:cardinality-constraints}
+\paragraph*{\textbf{Cardinality constraints}} Imposing constraints on the cardinality of tuples belonging to a certain group in a query result to mitigate bias and improve diversity was studied in~\cite{MLJ22, ERICA}. 
+In the context of ranking, cardinality constraints are used over the top-$k$ of the ranking for various values of $k$ (see, e.g., \cite{CSV18,YGS19, ICDE23}). Following this vein of research, we allow users to define constraints on the cardinality of groups (i.e., data subgroups) for this setting. 
+
+A {\it group} is a collection of tuples that share the same value(s) for one or more (categorical) attributes and is defined by a conjunction of conditions over values of the attributes. For instance, in \Cref{ex:running}, the group including women students 
+is defined by the condition ${\tt Gender} = F$ and consists of students $t_2$, $t_3$, $t_5$, $t_6$, $t_8$,  $t_9$,  $t_{11}$, and $t_{14}$. The group of low-income women candidates is then defined by the condition ${\tt Gender} = F \wedge {\tt Income} = Low$ and consists of students $t_2$, $t_3$, $t_6$, $t_{11}$, and $t_{14}$. A cardinality constraint $\lb{G}{k} = n$ (or $\ub{G}{k} = n$) specifies a lower (or an upper) bound of $n$ tuples belonging to a group $G$ appearing within the top-$k$ tuples of the result. For instance, in our running example, the constraint ``at least $3$ of the top-$6$ candidates are women'', can be expressed as  $\lb{{\tt Gender} = F}{k=6} = 3$. Multiple cardinality constraints may be composed together, forming a constraint set that we denote by~$\constraints{}$.
+
+\paragraph*{\textbf{Refinements}} We use the notion of query refinement defined in \cite{MK09}. Given a query $Q$, a refinement of $Q$ modifies its selection predicates. A numerical predicate $A \diamond C~\in \num(Q)$ is a modification to the value of $C$. For categorical predicates $\bigvee_{c \in C} A = c~ \in \cat(Q)$, a refinement is done by adding and/or removing predicates from the set of values $C$.  We say that a query $Q'$ is a \emph{refinement} of query $Q$ if $Q'$ is obtained from $Q$ by refining some predicates of $Q$.
+
+\begin{example}
+    The \running{} has two predicates: a numerical predicate {\tt GPA $\geq$ 3.7} and a categorical predicate {\tt Activity = `RB'}. A possible refinement of the numerical predicate may be {\tt GPA $\geq$ 3.6}. The categorical predicate may be refined by adding {\tt `GD'} to $C$. The refined query resulting from $Q$ by applying these refinements is the query depicted in Example~\ref{ex:refine-and-distance}. 
+\end{example}
+
+\subsection{Refinement Distance}
+\label{sec:distance}
+
+Our objective is to find a refinement $Q'$ that fulfills a specified set of constraints \emph{and} preserves the essence of the intent of query $Q$, i.e., is in some sense close to $Q$. A key question is how to measure the distance between a query $Q$ and a refinement $Q'$. %
+
+Recall from \Cref{ex:refine-and-distance} that there may be multiple ways to define such distance. %
+In this paper, we support distance functions of two kinds --- those that compare the predicates of $Q$ and $Q'$ (\emph{predicate-based}) and those that compare the top-$k$ results of $Q$ and $Q'$, either as sets or in ranked order (\emph{outcome-based}).  In both cases, a distance function returns a real number, with a smaller value indicating closer proximity between $Q$ and $Q'$.
+As we will discuss later, we use mixed-integer linear programming to find query refinements. Hence, the distance function must be linear (or able to be linearized) in the variables of its input. However, this limitation still permits a diverse set of valuable distance measures, as we demonstrate next.
+
+
+
+\paragraph*{\textbf{Predicate-based distance}}\sloppy
+    Given a query $Q$ and a refinement $Q'$, a natural distance measure with respect to a numerical predicate $n_Q = A \diamond C~\in \num(Q)$ is $\vert n_Q.C - n_{Q'}.C \vert$, where $n_Q.C$ is the value of $C$ in $n_Q$ and $n_{Q'}.C$ is the value of $C$ in $Q'$. The distance between all numerical predicates may be (normalized and) aggregated as $\sum_{n_Q\in \num(Q)} \frac{\vert n_Q.C - n_{Q'}.C \vert}{n_Q.C}$.
+     The distance between categorical attributes may be measured using the Jaccard distance, defined for a pair of sets $R$ and $S$ as $J(R, S) = 1 - \frac{|R \cap S|}{|R \cup S|}$. We may aggregate the distance across categorical predicates as $\sum_{c_Q \in \cat(Q)} J(c_Q.C, c_{Q'}.C)$, where $c_{Q'}\in \cat(Q')$ is the corresponding categorical attribute of $c_Q\in \cat(Q)$ ($c_Q$ and $c_{Q'}$ are of the form $\bigvee_{c \in C} A = c$). 
+     
+     Combining numerical and categorical components, we formulate the predicate-based distance between $Q$ and $Q'$ as: %
+    $$DIS_{pred}(Q,Q')=\sum_{n_Q\in \num(Q)} \frac{\vert n_Q.C - n_{Q'}.C \vert}{n_Q.C}+ \sum_{c_Q \in \cat(Q)} J(c_Q.C, c_{Q'}.C)$$
+
+
+\begin{example}
+    Let $Q'$ and $Q''$ be the refinements of the \running{} $Q$ shown in Examples~\ref{ex:first_refinement} and ~\ref{ex:refine-and-distance}, respectively. We compute $DIS_{pred}(Q,Q') = \frac{3.7 - 3.7}{3.7} + (1 - \frac{|\{RB\}|}{|\{RB, SO\}|}) = 0.5$, which is smaller than $DIS_{pred}(Q,Q'') = \frac{3.7 - 3.6}{3.7} + (1 - \frac{|\{RB\}|}{|\{RB, GD\}|}) \approx 0.53$.
+\end{example}    
+\paragraph*{\textbf{Outcome-based distance}} 
+Distance measures in this family compare the top-$k$ items $Q(D)_k$ and $Q'(D)_k$, for some value of $k$.  %
+We consider two types of distance measures: those that look at the top-$k$ as sets, and those that are sensitive to the ranked order among the top-$k$ items.  We give a couple of examples below, noting that many other set-wise and rank-aware distance metrics can be defined.
+
+A natural distance metric computes the Jaccard distance between the \emph{sets} of top-$k$ items of $Q$ and $Q'$: $DIS_{Jaccard}(Q, Q', k) = J(Q(D)_k, Q'(D)_k)$.
+\begin{example}
+Let $Q'$ and $Q''$, again, be the refinements of the \running{} $Q$ shown in Examples~\ref{ex:first_refinement} and ~\ref{ex:refine-and-distance}, respectively.
+Then, $DIS_{Jaccard}(Q, Q',k=3) = 1 - \frac{|\{t_4\}|}{|\{t_1, t_2, t_4, t_7, t_8\}|} = 0.8$, while $DIS_{Jaccard}(Q, Q'', k=3) = 1 - \frac{|\{t_4, t_7\}|}{|\{t_3, t_4, t_7, t_8\}|} = 0.5$. 
+\end{example}
+
+Observe that $Q''$ is closer to $Q$ according to $DIS_{Jaccard}$ at top-$3$, while $Q'$ is closer to $Q$ according to $DIS_{pred}$.
+
+Recall that query refinement does not reorder tuples.  That is, tuples that belong to $Q(D)_k \cap Q'(D)_k$ will appear in the same relative order in both top-$k$ lists. As another alternative, a rank-aware measure may, for example, use a variant of Kendall's $\tau$~\cite{10.1093/biomet/30.1-2.81} that was proposed by~\citet{FKS03} to compare the top-$k$ items of $Q$ and $Q'$. In a nutshell, this measure, which we denote $DIS_{Kendall}(Q, Q',k)$, considers the new tuples in the top-$k$ (i.e.,  $Q'(D)_k \setminus Q(D)_k$), and computes how much the tuples in the original top-$k$ ($Q(D)_k$) were displaced. (Cases 2 and 3 from~\cite{FKS03} apply in our setting.) %
+
+
+Intuitively, if $DIS_{Kendall}(Q, Q',k=3) < DIS_{Kendall}(Q, Q'',k=3)$, then 
+the tuples $Q''(D)_k \setminus Q(D)_k$
+are positioned closer to the top of the list than those in $Q'(D)_k \setminus Q(D)_k$.
+ 
+ 
+
+ \begin{example}
+     To illustrate $DIS_{Kendall}$, we introduce a new refinement $Q'''$, which we define as:
+     \begin{center}
+     \footnotesize
+     \begin{tabular}{l}
+        \verb"SELECT DISTINCT ID, Gender, Income "\\
+        \verb"FROM Students NATURAL JOIN Activities"\\
+        \verb"WHERE GPA >= 3.6 AND (Activity = 'CS' OR Activity = 'MO')"\\
+        \verb"ORDER BY SAT DESC "\\
+     \end{tabular}
+     \end{center}
+     Observe that $DIS_{pred}(Q,Q'') = DIS_{pred}(Q,Q''')$ and $DIS_{Jaccard}(Q,Q'',k=3) = DIS_{Jaccard}(Q,Q''',k=3)$. 
+     However, the resulting ranking of $Q'''(D)$ is $[t_4, t_5, t_7, t_8, t_{10}, t_{11}, t_{12}]$. This refinement includes a new tuple $t_5$ in the output where it ranks second, while in $Q''$, the new tuple included ($t_3$) ranks first in $Q''(D)$. However, we find that $DIS_{Kendall}(Q,Q'', k=3) > DIS_{Kendall}(Q,Q''',k=3)$,
+     meaning that $Q'''$ is preferable to $Q''$ according to this measure. %
+ \end{example}
+
+
+    These measures can be combined to formulate new measures that take into account both the queries' predicate distance and the outputs, e.g., using a weighted function.  %
+
+
+\subsection{Problem Formulation}
+Given a query $Q$, a set of cardinality constraints $\constraints$, and a distance measure, our goal is to find a refinement with minimal distance from $Q$ that satisfies the set of constraints. However, we can show that such a refinement may not exist.
+
+
+
+
+
+\begin{table}%
+    \caption{Relation used for proof of \Cref{thm:no-perfect}}
+    \label{tab:no-perfect}
+    \small
+    \footnotesize
+    \begin{tabular}{lll}
+    \hline
+    \textbf{X} & \textbf{Y} & \textbf{Z} \\ \hline
+            A           & C               & 6          \\
+            A           & D               & 5           \\
+            A           & D               & 4           \\
+            B           & C               & 3          \\
+            A           & C               & 2          \\
+            B           & D               & 1          \\
+            \hline
+    \end{tabular}
+\end{table}
+
+\begin{theorem}
+	\label{thm:no-perfect}
+	There exists a database $D$, a query $Q$ over $D$, and a constraint set $\constraints$ such that no refinement of $Q$ evaluated over $D$ satisfies $\constraints$.
+\begin{proof}
+	We prove this claim by a simple example. Let $Q$ be the query {\tt SELECT * FROM "\Cref{tab:no-perfect}" WHERE Y = `C' OR Y = `D' ORDER BY Z DESC}. Let us require that $2$ tuples from group {\tt X = `B'} (or just $B$ for brevity) appear in the top-$3$ of the ranking, i.e., setting $\lb{X='B'}{k=3} = 2$. The original query evaluated over \Cref{tab:no-perfect} selects the entire table, resulting in a ranking with no tuples belonging to $B$ in the top-$3$. There are then only two possible refinements on the original query: {\tt Y = `C'} or {\tt Y = `D'}. In both cases, there is only $1$ item of $B$ in the top-$3$.
+    Neither the original query nor any of its possible refinements result in a query that satisfies the constraints.%
+\end{proof}
+\end{theorem}
+
+\Cref{thm:no-perfect} motivates the need to find a refinement that deviates as little as possible from satisfying the constraint set in the case that exact constraint satisfaction is impossible, which allows us to provide results that are more useful to the user than simply stating its infeasibility.
+To measure the deviation from the satisfaction of a given set of constraints $\constraints$, we leverage the notion of the \emph{mean absolute percentage error}, as was done in~\cite{BAM14}. Specifically, we use it to measure the deviation from the constraints over groups in $\constraints$ and their cardinalities in the output of the (refined) query. We modify its definition to not penalize rankings that are above (below) the cardinalities specified in lower (upper) bound constraints for a group. 
+\begin{definition}[Deviation]%
+\label{def:mospe}
+Recall that $Q(D)_k$ denotes the top-$k$ tuples in the output of the query $Q$ over a database $D$.  The deviation between $\constraints$ and $Q$, $DEV(Q(D), \constraints)$ is given by
+\begin{align*}
+ \frac{1}{|\constraints|} \sum_{(\mathscr{c}_{G, k} = n) \in \constraints} \frac{\max \left(\sign(\mathscr{c}) \cdot (n - |Q(D)_k \cap G|), 0 \right)}{n} 
+\end{align*}
+where $\sign(\mathscr{c})$ is $1$ for lower-bound constraints ($\ell$) and $-1$ for upper-bound constraints ($\mathscr{u}$). Larger values represent a larger violation of the constraint set.
+\end{definition}
+
+When computing deviation, we assume that the output of $Q(D)$ has at least the number of tuples of the largest $k$ with a constraint in $\constraints$. We refer to this quantity throughout as $k^*$.
+We are now ready to formally define the \problem{} problem.
+
+\begin{definition}[\problem{}]
+\label{def:best-approx-refinement}
+    Given a database $D$, a query $Q$, a constraint set $\constraints$, a maximum deviation from the constraint set $\varepsilon \geq 0$, and a distance measure $DIS : Q \times \mathcal{R} \times k \rightarrow \mathbb{R}$, the answer to the \problem{} problem is the refinement $Q'$ in
+    \begin{align*}
+        \argmin_{Q' \in \mathcal{R}}\ DIS(Q, Q', k) \ \ \textrm{such that} \ \ & DEV(Q'(D), \constraints) \leq \varepsilon
+    \end{align*}
+    where $\mathcal{R}$ is the set of possible refinements of $Q$ that have at least $k^*$ tuples in in their output. %
+    Note that the $k$ parameter is optional in the distance measure (e.g., $DIS_{pred}$ does not include it). %
+    A special value is returned if there is no refinement $Q'$ with constraint set deviation at most $\varepsilon$. %
+\end{definition}
+
+
+\problem{} provides the most similar (according to the given similarity definition) refinement with an acceptable deviation from satisfying the constraint set.
+
+We can show that this problem is {\sf NP-hard}.
+
+\begin{theorem}
+\label{thm:hardness}
+    \problem{} is {\sf NP-hard}.
+\end{theorem}
+
+The proof is based on a reduction from {\sc Vertex-Cover}, a well-known {\sf NP-complete} decision problem~\cite{K72}. To this end, we define the following corresponding decision problem. Given a database $D$, a query $Q$, a constraint set $\constraints$, a maximum deviation from the constraint set $\varepsilon \geq 0$, a value $k$, a distance measure $DIS : Q \times \mathcal{R} \times k \rightarrow \mathbb{R}$ and a maximum distance $\delta \geq 0$, determine whether there exists a refinement $Q'\in \mathbb{R}$ such that $DEV(Q'(D), \constraints) \leq \varepsilon$ and $DIS(Q, Q', k)~\leq~\delta$. 
+
+An input to the {\sc Vertex-Cover} problem consists of an undirected graph $G = (V, E)$ and a number $S$, and the goal is to determine whether there exists a {\it vertex cover}, i.e., a subset of vertices $V' \subseteq V$ such that for every edge $(u, v)$ in $E$, one or both of its endpoints, $u$ and $v$, are in $V'$ and $|V'| \leq S$. 
+Given $G = (V, E)$ and $S$, we create an input to our problem as follows. The database $D$ consists of a single relation that encodes the graph's edges, as well as dummy edges necessary to satisfy the minimum cardinality assumption made for calculating deviation. The query $Q$ is a query with a categorical predicate selecting the edges with an endpoint in a given set of vertices with an {\tt ORDER BY} clause that always places dummy edges below real edges. We construct a set of cardinality constraints that are perfectly satisfied if and only if all the real edges are selected. Then, by using the $DIS_{pred}$ measure, we set $\delta$ such that there is only a refinement if there are at most $S$ vertices selected as the covering and set $\varepsilon$ to $0$. The details of the reduction and its correctness proof are given in \cite{Extended}.

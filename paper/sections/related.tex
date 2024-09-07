@@ -1,0 +1,36 @@
+\section{Related Work}
+\label{sec:related}
+
+
+\paragraph*{\textbf{Query refinements.}} The problem of query refinement has been addressed in previous studies such as~\cite{muslea2005online, KoudasLTV06, MK09, chu1994structured, tran2010conquer, tran2009query}. 
+They focus on modifying queries to satisfy cardinality constraints, mostly emphasizing the overall output size rather than specific data groups within the output, and does not consider ranking of the results. 
+For example, \cite{muslea2005online, KoudasLTV06} aim to relax queries with an empty result set to produce some answers. Other works like~\cite{MK09, chu1994structured} address the issues of too many or too few answers by refining queries to meet specific cardinality constraints on the result's size.
+A recent line of work has studied the use of refinement to satisfy diversity constraints~\cite{MLJ22,ERICA,SSAD22}. The work of~\cite{SSAD22} aims to refine queries to satisfy constraints on the size of specific data groups in the result, however, they consider only numerical predicates with a single binary sensitive attribute. Closer to our work,~Erica \cite{MLJ22,ERICA,ERICAfull} utilizes provenance annotations to efficiently find minimal refinements. While our proposed solution is inspired by these works, their focus is on selection queries and can not be easily extended to ranking queries. Particularly, the provenance model used in these works is insufficiently expressive to capture the semantics of ranking, motivating our need to devise a new way to annotate and use these annotations to find the best approximation refinement. We discuss and demonstrate the differences
+in \Cref{sec:erica_comparison}.
+
+
+\paragraph*{\textbf{Constrained query answering.}} More generally, our problem answers queries that are subject to some set of constraints over the results. Systems like those proposed in~\cite{BRAM15,BAM14} allow querying groups of tuples that optimize some objective function while satisfying some constraints on the output, including cardinality constraints. However, they do not support top-$k$ queries and therefore do not extend to the ranking setting. The work in~\cite{BAM14} specifically relaxes the constraints of the problem to achieve partial satisfaction of the set of constraints, however it does so by removing constraints and not by modifying them as in our work. In \cite{Tiresias}, the authors develop a system to answer how-to queries. How-to queries answer how to modify the database in order to satisfy some constraints while optimizing for an objective. However, their system also lacks support for ranking, making it unsuitable to use for intervening on the top-$k$ for various $k$ values as in our framework.
+
+
+
+
+
+\paragraph*{\textbf{Fairness in ranking.}} The problem we consider in this paper has implications in the context of fairness. Fairness in ranking has been the subject of much recent attention~\cite{ZYS23, ZYS23b, YGS19,CSV18, AJS19, IWSR22, CMR23, YS17, KR18, CMV20}. These works can be categorized as post-processing methods (e.g.,~\cite{YS17, YGS19,CSV18}) that directly modify the output rankings, or in-processing solutions~\cite{AJS19, IWSR22, CMR23, KR18, CMV20} that adjust the ranking algorithm or modify items to produce a different score. Our solution can be considered as an in-processing method, however unlike existing solutions, we assume ranking algorithms and scores of different items are well-designed, and do not modify them.
+
+
+
+
+
+
+  
+\paragraph*{\textbf{Query result diversification.}}
+Query result diversification aims to increase result diversity while maintaining relevance of results to the original query by including or excluding tuples from the set of tuples in the result of the query output.~\cite{GS09,VRB+11,DF14}. Unlike our solution, the diversification is achieved by modifying the set of the tuples directly rather than the query, and does not consider tuples absent from the original query.
+
+
+
+\paragraph*{\textbf{MILP \& databases.}} Mixed-integer linear programming has been used in data management in order to solve relevant {\sf NP-hard} optimization problems. However, as pointed out in \cite{Tiresias,QFix,BAM18,PackageQueriesScale}, scaling MILP problems to database-size problems is difficult. In order to scale, these works make several optimizations. In particular, the relevancy-based optimization we proposed resembles optimizations presented in~\cite{QFix,Tiresias}.
+
+
+
+
+

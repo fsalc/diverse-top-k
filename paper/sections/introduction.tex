@@ -1,0 +1,171 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Ranking-based decision making is prevalent in various application domains, including hiring~\cite{GeyikAK19} and school admission~\cite{peskun2007effectiveness}. Typically, this process involves selecting qualifying candidates based on specific criteria (e.g., for a job position) and ranking them using a quantitative measure to identify the top candidates among those who qualify (e.g., for a job interview or offer). This process may be automated and expressed using %
+SQL queries, with the {\tt WHERE} clause used to select candidates who meet certain requirements, and the {\tt ORDER BY} clause used to rank them. We next illustrate this idea using a simple example in the context of awarding scholarships.
+
+
+\begin{example}
+	\label{ex:running}
+	Consider a foundation that wishes to grant six high-performing students scholarships to universities in order to encourage participation in STEM programs. 
+ The foundation utilizes a database of all students seeking scholarships provided by their schools, which may be filtered according to the requirements of the foundation. 
+ \Cref{tab:candidates} shows the students dataset, consisting of five attributes: a unique ID, gender, family's income level, grade point average (GPA), and SAT score. The schools also provide information on the student's 
+ involvements with extracurricular activities, which are shown in \Cref{tab:internships} as a dataset with two attributes: the student's ID and an abbreviation representing the activity in which they participated. The set of activities in \Cref{tab:internships} consists of robotics ($RB$), Science Olympiad ($SO$), Math Olympiad ($MO$), game development ($GD$), and a STEM tutoring organization ($TU$).
+ 
+    The foundation would like to award these scholarships to students who have displayed interest in STEM fields through their involvement in extracurricular activities and have maintained a minimum GPA. The selected students are ranked by their SAT exam scores, and the foundation grants funding to the best six students and additional funding to the top three students.
+    These requirements can be expressed using the following query, which selected students who have participated in an extracurricular robotics club with a minimum GPA of $3.7$:
+    
+    \begin{center}
+    \footnotesize
+    \begin{tabular}{l}
+        \verb"SELECT DISTINCT ID, Gender, Income "\\
+        \verb"FROM Students NATURAL JOIN Activities"\\
+        \verb"WHERE GPA >= 3.7 AND Activity = 'RB'"\\
+        \verb"ORDER BY SAT DESC"\\
+    \end{tabular}
+    \end{center}
+    We refer to this query throughout as the \running{}. Evaluating this query over the datasets in \Cref{tab:candidates,tab:internships} produces the ranking $[t_4, t_7, t_8, t_{10}, t_{11}, t_{12}]$. %
+    Therefore, the foundation awards students $t_4$, $t_7$, $t_8$ with an extra scholarship and students $t_{10}$, $t_{11}$, and $t_{12}$ with the regular amount.
+\end{example}
+
+\begin{table}[t]
+\begin{center}
+\hspace{-1cm}
+\begin{minipage}{0.6\linewidth}
+        \centering
+		\caption{\candidates{}}
+		\label{tab:candidates}
+        \footnotesize
+		\begin{tabular}{lccrr}
+		\hline
+		\textbf{ID} & \textbf{Gender} & \textbf{Income} & \textbf{GPA} & \textbf{SAT $\downarrow$} \\ \hline
+		$t_1$           & M               & Medium         & 3.7      & 1590 \\    
+		$t_2$           & F               & Low         & 3.8      & 1580 \\    
+		$t_3$           & F               & Low         & 3.6      & 1570 \\    
+		$t_4$           & M               & High         & 3.8      & 1560 \\    
+		$t_5$           & F               & Medium         & 3.6      & 1550 \\    
+		$t_6$           & F               & Low         & 3.7      & 1550 \\    
+		$t_7$           & M               & Low         & 3.7      & 1540 \\    
+		$t_8$           & F               & High         & 3.9      & 1530 \\    
+		$t_9$           & F               & Medium         & 3.8      & 1530 \\    
+		$t_{10}$           & M               & High         & 3.7      & 1520 \\    
+		$t_{11}$           & F               & Low         & 3.8      & 1490 \\    
+		$t_{12}$           & M               & Medium         & 4.0      & 1480 \\    
+		$t_{13}$           & M               & High         & 3.5      & 1430 \\  
+  	$t_{14}$           & F               & Low         & 3.7      & 1410 \\  
+        \hline
+		\end{tabular}
+\end{minipage}
+\hspace{-2cm}
+\begin{minipage}{.35\linewidth}
+    \centering
+    \caption{\internships{}}
+    \label{tab:internships}
+    \footnotesize
+    \begin{tabular}{lc}
+    \hline
+    \textbf{ID} & \textbf{Activity} \\ \hline
+        $t_{1}$            & SO        \\  
+        $t_{2}$            & SO        \\  
+        $t_{3}$            & GD        \\  
+        $t_{4}$            & RB        \\
+        $t_{4}$            & TU        \\
+        $t_{5}$            & MO        \\  
+        $t_{6}$            & SO        \\  
+        $t_{7}$            & RB        \\  
+        $t_{8}$          & RB        \\
+        $t_{8}$           & TU        \\
+        $t_{10}$           & RB        \\  
+        $t_{11}$           & RB        \\  
+        $t_{12}$           & RB        \\
+        $t_{14}$          & RB        \\
+        \hline
+    \end{tabular}
+\end{minipage}
+\end{center}
+\end{table}
+
+
+
+
+If the query is part of some high-stakes decision-making process, stating diversity requirements as cardinality constraints over the presence of some demographic groups in the top-$k$ result is natural. For instance, in the above example, the foundation may wish to promote female students in STEM by awarding a proportional number of scholarships to male and female applicants, i.e., the top-$6$ tuples in the output should include at least three females. Moreover, to expand access to STEM education, the foundation may also wish to limit the extended scholarships granted to students from high-income families. Namely, the top-$3$ results should include at most one student with a high income. The \running{} does not satisfy these constraints since the top-$6$ tuples are $t_4, t_7, t_8, t_{10}, t_{11}$ and $t_{12}$, which includes only two females ($t_8$ and $t_{11}$), and the top-$3$ includes two students from high-income families ($t_4$ and $t_{8}$). 
+
+
+
+
+
+
+
+ In this paper, we propose a novel \emph{in-processing} method to improve the diversity of a ranking by refining the query that produces it.%
+ 
+ \begin{example}
+    \label{ex:first_refinement}
+    The \running{} may be refined by adjusting the condition on \verb"Activity" to include students involved in Science Olympiad ($SO$), resulting in the following query:
+    \begin{center}
+    \footnotesize
+    \begin{tabular}{l}
+        \verb"SELECT DISTINCT ID, Gender, Income "\\
+        \verb"FROM Students NATURAL JOIN Activities"\\
+        \verb"WHERE GPA >= 3.7 AND (Activity = 'RB' OR Activity = 'SO')"\\
+        \verb"ORDER BY SAT DESC"\\
+    \end{tabular}
+    \end{center}
+    Note that the essence of the query (selecting students who have displayed interest in STEM) is maintained by the refined query, while the constraints are satisfied as the top-$6$ tuples ($t_1, t_2, t_4, t_6, t_7,$ and $t_8$) consist of three women ($t_2, t_6$ and $t_8$) where the top-$3$ includes only a single student ($t_4$) with high income.
+    
+    
+\end{example}
+
+
+ 
+
+The notion of refining queries to satisfy a set of diversity constraints was recently presented in~\cite{ERICA, ERICAfull}, however, this work focuses on cardinality constraints over the {\it entire} output and does not consider the order of tuples.
+The problem of ensuring diverse outputs in ranking queries has received much recent attention from the research community~\cite{YS17, CSV18, YGS19, AJS19, KR18, CMV20}. For instance, in \cite{YS17, CSV18, YGS19}, output rankings are modified directly in a \emph{post-processing step}, in order to satisfy a given set of constraints over the cardinality of protected groups in the ranking. E.g., to fulfill the desired constraints in the above example, the foundation may manipulate the output, awarding $t_4$, $t_5$, $t_6$, $t_7$, $t_8$ and $t_{10}$ with a scholarship, where $t_4$, $t_5$ and $t_6$ will get the extended grant. However, this leaves open the question of \emph{how one may obtain such a ranking in the first place}.
+
+
+
+Further, post-processing may be problematic to use to improve diversity, for two reasons: (1) by definition, it modifies the results after they were computed, raising a procedural fairness concern, and (2) it may explicitly use information about demographic or otherwise protected group membership, raising a disparate treatment concern. In contrast, in-processing %
+is usually legally permissible, essentially because it applies the same evaluation process to all individuals. That is, by modifying the query we produce a new set of requirements, and test all individuals against these same requirements.  In contrast, post-processing methods may decide to include or exclude individuals based on which groups they belong to, therefore treading individuals differently depending on group membership.
+Alternative in-processing solutions involve adjustments to the ranking algorithm~\cite{AJS19} or modifying items to produce a different score~\cite{KR18, CMV20}. Our approach, conversely, assumes the ranking algorithms and scores of different items are well-designed and fixed, and we aim to modify the set of tuples to be ranked.
+
+ Our goal is to find minimal refinements to the original query that fulfill a specified set of constraints, however, we note that the notion of minimality may be defined in different ways, depending, for example, on the legal requirements or on the user's preferences.
+
+ \begin{example}
+    \label{ex:refine-and-distance}
+    We may refine the \running{} by relaxing the GPA requirement to $3.6$ and including students who participated in a game development activity $(GD)$,  obtaining the following query: 
+    \begin{center}
+    \footnotesize
+    \begin{tabular}{l}
+        \verb"SELECT DISTINCT ID, Gender, Income "\\
+        \verb"FROM Students NATURAL JOIN Activities"\\
+        \verb"WHERE GPA >= 3.6 AND (Activity = 'RB' OR Activity = 'GD')"\\
+        \verb"ORDER BY SAT DESC"\\
+    \end{tabular}
+    \end{center}
+    Similarly to the refined query from Example~\ref{ex:first_refinement}, the top-$6$ students %
+    ($t_3$, $t_4$, $t_7$, $t_8$, $t_{10}$, and $t_{11}$) include three women ($t_3$, $t_8$, and $t_{11}$), and there is only a single high-income student ($t_3$) among the top-$3$. While the predicates of this refined query are intuitively more distant from the original query than our prior refinement in Example~\ref{ex:first_refinement} (two modifications compared to a single one), its output is more similar to the output of the original query (the top-$3$ sets differ by one tuple).
+    
+\end{example}
+
+To accommodate different alternative query relaxation objectives, as illustrated above, we propose a framework that allows the user to specify their preferred notion of minimality. 
+
+To the best of our knowledge, our work is the first to intervene on the ranking process by modifying {\it which} items are being considered by the ranking algorithm. This admits a large class of ranking algorithms while keeping the relative order of tuples consistent. This---of course---does not come for free; the coarseness of refinements means that there may be no refinement that produces a satisfactorily diverse ranking. Therefore, we study the problem of finding a refined query %
+that is within a specified maximum distance from satisfying all of the constraints, if one exists. %
+
+
+
+
+
+
+
+
+\paragraph*{\textbf{Contributions \& roadmap}}
+We begin by formalizing the \problem{} problem of obtaining a refined query that is closest, according to a given distance measure, to the original query, while still adhering to a set of cardinality constraints within a maximum distance, and show that this problem is {\sf NP-hard} (\Cref{sec:background}).
+We thus propose modeling the problem as a mixed-integer linear program (MILP) and utilizing it to derive an approximate solution (\Cref{sec:search}). Inspired by the use of data annotations (provenance) to perform what-if analysis, i.e., to efficiently reevaluate queries using algebraic expression without constantly accessing a DBMS (see, e.g., ~\cite{DIMT13, BourhisDM16, DeutchMT14, MoskovitchLJ22}), we construct the MILP using data annotation variables. 
+This formulation offers two advantages: it allows us to leverage the effectiveness of existing MILP solvers while avoiding the costly reevaluation of queries on the DBMS.
+
+Existing MILP solvers may solve the problem efficiently however their performance is sensitive to the size of the program. The program generated in Section~\ref{sec:search} is linear in the data size, which can be challenging in real-life scenarios as we demonstrate in our experimental evaluation. We, therefore, propose optimizations to make our approach more scalable, using the relevancy of the data and the structure of the set of cardinality constraints to prune and relax our problem (\Cref{sec:optimizations}). In \Cref{sec:experiments}, we present an extensive experimental evaluation. We developed a dedicated benchmark consisting of real-life datasets and considering realistic scenarios. Our results show the efficiency and scalability of our approach with respect to different parameters of the problem. 
+
+
+
+
+

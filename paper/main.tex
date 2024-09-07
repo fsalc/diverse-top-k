@@ -1,0 +1,159 @@
+
+
+\documentclass[acmsmall]{acmart}
+
+
+
+
+\usepackage{cleveref}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{multirow} 
+\usepackage{svg}
+\usepackage[breakable, skins]{tcolorbox}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\resolve}[1]{\colorbox{red!20}{#1}}
+\newcommand{\idea}[1]{\colorbox{yellow!20}{#1}}
+
+\newenvironment{sketch}{%
+  \renewcommand{\proofname}{Proof Sketch}\proof}{\endproof}
+
+\newcommand{\problem}{\textsc{Best Approximation Refinement}} %
+
+\newcommand{\ranking}{R}
+
+\newcommand{\running}{\textit{scholarship query}}
+\newcommand{\candidates}{\texttt{Students}}
+\newcommand{\internships}{\texttt{Activities}}
+
+\newcommand{\lb}[2]{\ell_{#1, #2}}
+\newcommand{\ub}[2]{\mathscr{u}_{#1, #2}}
+\newcommand{\cc}[2]{\mathscr{c}_{#1, #2}}
+\newcommand{\constraints}{\mathcal{C}}
+
+\newcommand{\conds}{\textsf{Preds}}
+\newcommand{\cat}{\textsf{Cat}}
+\newcommand{\num}{\textsf{Num}}
+\newcommand{\attr}{\textsf{Attr}}
+\newcommand{\sign}{\textsf{Sign}}
+\newcommand{\domain}{\textsf{Domain}}
+
+\newcommand{\provvars}{P}
+\newcommand{\prov}{\textsf{Lineage}}
+
+\newcommand{\numbercircled}[1]{\textcircled{\small #1}}
+
+\usepackage{subfiles}
+
+\setcopyright{rightsretained}
+\acmJournal{PACMMOD}
+\acmYear{2024} \acmVolume{2} \acmNumber{3 (SIGMOD)} \acmArticle{166} \acmMonth{6}\acmDOI{10.1145/3654969}
+
+\received{October 2023}
+\received[revised]{January 2024}
+\received[accepted]{February 2024}
+
+\makeatletter
+\gdef\@copyrightpermission{
+  \begin{minipage}{0.2\columnwidth}
+   \href{https://creativecommons.org/licenses/by/4.0/}{\includegraphics[width=0.90\textwidth]{figures/4ACM-CC-by-88x31.eps}}
+  \end{minipage}\hfill
+  \begin{minipage}{0.8\columnwidth}
+   \href{https://creativecommons.org/licenses/by/4.0/}{This work is licensed under a Creative Commons Attribution International 4.0 License.}
+  \end{minipage}
+  \vspace{5pt}
+}
+\makeatother
+
+\begin{document}
+
+\title{Query Refinement for Diverse Top-$k$ Selection}
+
+\author{Felix S. Campbell}
+\orcid{0000-0003-3888-1491}
+\affiliation{%
+  \institution{Ben-Gurion University of the Negev}
+  \country{Israel}
+}
+\email{felixsal@post.bgu.ac.il}
+
+\author{Alon Silberstein}
+\orcid{0009-0009-7591-1267}
+\affiliation{%
+  \institution{Ben-Gurion University of the Negev}
+  \country{Israel}
+}
+\email{alonzilb@post.bgu.ac.il}
+
+\author{Julia Stoyanovich}
+\orcid{0000-0002-1587-0450}
+\affiliation{%
+  \institution{New York University}
+  \country{United States of America}
+}
+\email{stoyanovich@nyu.edu}
+
+\author{Yuval Moskovitch}
+\orcid{0000-0002-0325-7392}
+\affiliation{%
+  \institution{Ben-Gurion University of the Negev}
+  \country{Israel}
+}
+\email{yuvalmos@bgu.ac.il}
+
+\renewcommand{\shortauthors}{Felix S. Campbell, Alon Silberstein, Julia Stoyanovich, \& Yuval Moskovitch}
+
+\begin{abstract}
+Database queries are often used to select and rank items as decision support for many applications. As automated decision-making tools become more prevalent, there is a growing recognition of the need to diversify their outcomes. In this paper, we define and study the problem of modifying the selection conditions of an {\tt ORDER BY} query so that the result of the modified query 
+closely fits some user-defined notion of diversity while simultaneously maintaining the intent of the original query. We show the hardness of this problem and propose a mixed-integer linear programming (MILP) based solution. We further present optimizations designed to enhance the scalability and applicability of the solution in real-life scenarios. 
+We investigate the performance characteristics of our algorithm and show its efficiency and the usefulness of our optimizations.
+
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003456.10003457.10003567.10010990</concept_id>
+<concept_desc>Social and professional topics~Socio-technical systems</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+   <concept>
+       <concept_id>10002951.10002952</concept_id>
+       <concept_desc>Information systems~Data management systems</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Data management systems}
+\ccsdesc[500]{Social and professional topics~Socio-technical systems}
+
+\keywords{Query refinement, diversity, provenance, ranking, top-k}
+
+\maketitle
+
+
+
+\input{sections/introduction}
+
+\input{sections/background}
+
+\input{sections/search}
+
+\input{sections/experiments}
+
+\input{sections/related}
+
+\input{sections/conclusion}
+
+\begin{acks}
+ This research was partially supported by The Israel Science Foundation grant 2121/22, the Frankel Center for Computer Science at BGU, and NSF Awards No. 2326193 and 2312930.
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{main}
+
+\end{document}
