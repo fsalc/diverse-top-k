@@ -20,7 +20,7 @@ If there are any issues evaluating the reproducibility package or otherwise usin
     ```apt-get install docker docker-compose build-essential```
 
 > [!IMPORTANT]
-> In general, a license for **IBM CPLEX is required** for our implementation. Please ensure to place the `.bin` file of your licensed installer **(for Linux x86-64)** in the [docker-utils](docker-utils) folder, and the scripts will take care of the rest.
+> In general, a license for **IBM CPLEX is required** for our implementation. CPLEX is available for free for academics (see [here](https://community.ibm.com/community/user/ai-datascience/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students) for instructions on how to obtain such a license). Please ensure to place the `.bin` file of your licensed installer **(for Linux x86-64)** in the [docker-utils](docker-utils) folder, and the scripts will take care of the rest.
 
 > [!NOTE]
 >  For compatability, we recommend IBM ILOG CPLEX Optimization Studio V22.1.1 (part no. `G0798ML`). From it, download IBM ILOG CPLEX Optimization Studio V22.1.1 for Linux x86-64.
