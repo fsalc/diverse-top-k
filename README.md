@@ -35,7 +35,7 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
 ### ❸ Running experiments, generating figures, & recompiling the paper
 
-* In order to run the experiments, generate plots, and recompile the paper, simply run
+* In order to run the experiments, generate plots, and recompile the paper, simply run (from this directory)
 ```shell
 make paper
 ```
