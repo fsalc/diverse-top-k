@@ -662,7 +662,7 @@ class Ranking(object):
             solver_time = timer()
             # Pick possible refinement, check if pruned, then evaluate refinement and check distance & satisfaction
             for i in (dict(zip(R.keys(), a)) for a in product(*R.values())):
-                conds = " AND ".join([f'''{k} ({", ".join(f"'{v_}'" for v_ in v)})''' if type(v) == tuple else f'{k} {v}' for k, v in i.items()])
+                conds = " AND ".join([f'''{k} ({", ".join(f"'{v_}'" for v_ in v)})''' if type(v) == list else f'{k} {v}' for k, v in i.items()])
 
                 guaranteedEmpty = False
                 for attr in self.conds_attrs(self.numerical()):
