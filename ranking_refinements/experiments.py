@@ -16,6 +16,20 @@ import csv
 
 from ranking_refinements.utils import timeout
 
+# Limit memory usage ---
+# Some experiments will try to build LP problems that are too large
+# We set a soft memory limit so that MemoryError is thrown from which we can proceed
+# to the next iteration
+
+import os
+import resource
+# NOTE: This is not portable, works only on Unix-based systems
+total_memory = os.sysconf('SC_PHYS_PAGES') * os.sysconf('SC_PAGE_SIZE')
+try:
+    resource.setrlimit(resource.RLIMIT_AS, (total_memory - (1024 ** 3), total_memory))
+    print(f'INFO\tsoft memory limit set: {(total_memory - (1024 ** 3)) / (1024 ** 3):.2f} GB')
+except ValueError:
+    print('WARN\twas unable to set memory limits, experiments may consume too much memory')
 
 class Experiment:
 
