@@ -8,7 +8,6 @@ from multiprocessing import Process
 
 from ranking_refinements.fair import Ranking, Constraints, Constraint, Group, UsefulMethod, RefinementMethod
 from ranking_refinements.query import Query, Condition
-from ranking_refinements.plot_figure import plot_figure
 
 import numpy as np
 from copy import deepcopy
@@ -121,8 +120,8 @@ class ExperimentsRunner:
 
                                         try:
                                             refinement, times = refine()
-                                        except TimeoutError:
-                                            refinement, times = None, (0, 0, 3600 * 2)
+                                        except (TimeoutError, MemoryError):
+                                            refinement, times = None, (0, 0, 3600)
                                         setup_duration = times[1] - times[0]
                                         solver_duration = times[2] - times[1]
                                         total_duration = times[2] - times[0]

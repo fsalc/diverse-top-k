@@ -21,7 +21,7 @@ import subprocess
 
 plt.rc('text')
 plt.rc('font', family='serif')
-plt.rc('text', usetex=True)
+plt.rc('text', usetex=False)
 plt.rc('pgf',rcfonts=False)
 # sns.set_palette("Paired")
 # sns.set_palette("deep")
@@ -30,9 +30,6 @@ sns.set_style("whitegrid")
 # sns.palplot(sns.color_palette("deep", 10))
 # sns.palplot(sns.color_palette("Paired", 9))
 plt.tight_layout()
-
-color = ['C0', 'C1', 'C2', 'C3', 'C4']
-plt_title = ["BlueNile", "COMPAS", "Credit Card"]
 
 label = ["Naive", "Optimized"]
 LINE_WIDTH = 5
@@ -231,12 +228,14 @@ def plot_durations_graphs(x, y_setup, y_solver, y_total, deviations,
     plot_features(index, x, x_label, y_label, title)
     plt.savefig(Path(output_dir, f'{output_name}__{y_label}_by_{x_label}__bar.pdf', bbox_inches='tight', format="pdf"), bbox_inches='tight')
     plt.clf()
+    plt.close()
     # plt.show()
 
     plot_lines_duration_graph(index, y_setup, y_total, color_index, legend_prefix, annotations=deviations, ax=ax)
     plot_features(index, x, x_label, y_label, title)
     plt.savefig(Path(output_dir, f'{output_name}__{y_label}_by_{x_label}__lines.pdf'), bbox_inches='tight', format="pdf")
     plt.clf()
+    plt.close()
     # plt.show()
 
 
@@ -413,7 +412,7 @@ STATISTICS = {
                          'statistics.csv'),
         }
     },
-    'predicate_kind': {
+    'predicate_type': {
         'JAC': {
             'Astr': Path('.', 'experiments', 'Predicate', 'max_original',
                          'Predicate_MO_Astronauts', 'statistics.csv'),
@@ -477,7 +476,7 @@ class GraphKind(Enum):
 
 GRAPH_KIND_TO_LABEL = {
     GraphKind.LINE: ['K', 'max_deviation', 'number_of_constraints'],
-    GraphKind.BAR: ['constraints_bounds', 'predicate_kind']
+    GraphKind.BAR: ['constraints_bounds', 'predicate_type']
 }
 
 
@@ -533,6 +532,7 @@ def plot_duration_for_combined_useful_for_each_dataset(log_scale=False):
             plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                         bbox_inches='tight', format="pdf")
             plt.clf()
+            plt.close()
             # plt.show()
 
 
@@ -555,7 +555,7 @@ READABLE_LABLES = {
     'max_deviation': 'Maximum deviation ($\\varepsilon$)',
     'number_of_constraints': 'Number of Constraints',
     'constraints_bounds': 'Types of Constraints',
-    'predicate_kind': 'Type of Predicates',
+    'predicate_type': 'Type of Predicates',
     'duration[sec]': 'Duration [sec]'
 }
 
@@ -620,6 +620,7 @@ def plot_algorithm_comparison_per_dataset(log_scale=False):
         dataset_df = None
         if os.path.exists(path):
             dataset_df = pd.read_csv(path)
+            dataset_df = dataset_df.drop(dataset_df[dataset_df['total_duration[sec]'] >= 3600].index)
         else:
             print(f'Skip {dataset_sign} -- because {path} does not exist!')
 
@@ -690,6 +691,7 @@ def plot_algorithm_comparison_per_dataset(log_scale=False):
         plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                     bbox_inches='tight', format="pdf")
         plt.clf()
+        plt.close()
         # plt.show()
 
 def plot_data_size_comparison_per_useful(log_scale=False):
@@ -743,6 +745,7 @@ def plot_data_size_comparison_per_useful(log_scale=False):
         plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                     bbox_inches='tight', format="pdf")
         plt.clf()
+        plt.close()
         # plt.show()
 
 def plot_lineage_classes_comparison_per_useful(log_scale=False):
@@ -794,6 +797,7 @@ def plot_lineage_classes_comparison_per_useful(log_scale=False):
         plt.savefig(Path(output_dir, f'{dataset_sign}-CombUseful__{y_label}_by_{x_label}__{scale}__lines.pdf'),
                     bbox_inches='tight', format="pdf")
         plt.clf()
+        plt.close()
         # plt.show()
 
 # def plot_algorithm_comparison(log_scale=False):
@@ -872,7 +876,7 @@ if __name__ == '__main__':
     plot_duration_for_combined_useful_for_each_dataset()
     plot_duration_for_combined_useful_for_each_dataset(True)
     plot_data_size_comparison_per_useful()
-    plot_lineage_classes_comparison_per_useful()
+    # plot_lineage_classes_comparison_per_useful()
     # # plot_algorithm_comparison_per_useful()
     plot_algorithm_comparison_per_dataset()
     plot_algorithm_comparison_per_dataset(True)

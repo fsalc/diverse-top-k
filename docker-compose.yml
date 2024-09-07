@@ -1,0 +1,15 @@
+services:
+  latex:
+    image: kjarosh/latex:2024.3
+    command: sh -c "pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex"
+    working_dir: /paper
+    volumes:
+      - ./paper:/paper
+  ranking-refinements:
+    image: rodeo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./figures:/ranking_refinements/ranking_refinements/figures
+      - ./results:/ranking_refinements/ranking_refinements/experiments

@@ -1,0 +1,1 @@
+The CPLEX installer `cplex_studio2211.linux_x86_64.bin` must be placed in this directory if building the Docker image from scratch.

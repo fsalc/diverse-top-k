@@ -201,7 +201,15 @@ class Ranking(object):
     def orig_ranked(self, attrs=None, top=None, opt=True):
         # for tpch
         # TODO: refactor
-        quotedRenamed = " ".join([f'"{attr}"' if '.' in attr and ('"' not in attr and "'" not in attr) else attr for attr in self.where.args['this'].sql().split(' ')])
+        def isnumeric(string):
+            try:
+                float(string)
+                return True
+            except ValueError:
+                return False
+
+        # Don't quote numbers that are constants of the predicate, e.g. "3.5"
+        quotedRenamed = " ".join([f'"{attr}"' if '.' in attr and not isnumeric(attr) and ('"' not in attr and "'" not in attr) else attr for attr in self.where.args['this'].sql().split(' ')])
 
         if opt:
             return list(d.sql(f'''
@@ -227,14 +235,13 @@ class Ranking(object):
             ).fetchnumpy().items()}
             return self.cached
         
-        sq = sqlglot.select('*').from_(self.from_)
+        sq = sqlglot.select('*').from_(self.from_).order_by(self.utility)
         for join in self.joins:
             sq = sq.join(join)
         q = sqlglot.subquery(sq).select('*').select('ROW_NUMBER() OVER () - 1 AS r')
 
-
         self.cached = {k: v.filled() for k, v in d.sql(
-            q.order_by(self.utility).sql()
+            q.sql()
         ).fetchnumpy().items()}
         return self.cached
 
@@ -610,10 +617,12 @@ class Ranking(object):
             attrs = self.conds_attrs(self.conds())
             relevant_attrs = list(protected.union(attrs))
 
-            # From Python 3 documentation:
             def powerset(iterable):
-                s = list(iterable)
-                return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
+                iterable = list(iterable)
+                s = len(iterable)
+                for i in range(1, 1 << s):
+                    yield [iterable[j] for j in range(s) if (i & (1 << j))]
+                # return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
 
             # Distance setups
             C = defaultdict(list)
@@ -659,7 +668,7 @@ class Ranking(object):
                 for attr in self.conds_attrs(self.numerical()):
                     lb = i.get(f'{attr} >', None) or i.get(f'{attr} >=', None)
                     ub = i.get(f'{attr} <', None) or i.get(f'{attr} <=', None)
-                    if lb and ub and lb > ub:
+                    if lb != None and ub != None and lb > ub:
                         guaranteedEmpty = True
                 if guaranteedEmpty: continue
 
@@ -744,10 +753,12 @@ class Ranking(object):
             attrs = self.conds_attrs(self.conds())
             relevant_attrs = list(protected.union(attrs))
 
-            # From Python 3 documentation:
             def powerset(iterable):
-                s = list(iterable)
-                return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
+                iterable = list(iterable)
+                s = len(iterable)
+                for i in range(1, 1 << s):
+                    yield [iterable[j] for j in range(s) if (i & (1 << j))]
+                # return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
 
             # Distance setups
             C = defaultdict(list)
@@ -815,7 +826,7 @@ class Ranking(object):
                 for attr in self.conds_attrs(self.numerical()):
                     lb = i.get(f'{attr} >', None) or i.get(f'{attr} >=', None)
                     ub = i.get(f'{attr} <', None) or i.get(f'{attr} <=', None)
-                    if lb and ub and lb > ub:
+                    if lb != None and ub != None and lb > ub:
                         guaranteedEmpty = True
                 if guaranteedEmpty: continue
 
@@ -824,15 +835,15 @@ class Ranking(object):
                     #check if match
                     match = True
                     for attr in attrs:
-                        if i.get(f'{attr} IN', None) and lineage[attr] not in i.get(f'{attr} IN', None):
+                        if i.get(f'{attr} IN', None) != None and lineage[attr] not in i.get(f'{attr} IN', None):
                             match = False
-                        if i.get(f'{attr} >', None) and lineage[attr] <= i.get(f'{attr} >', None):
+                        if i.get(f'{attr} >', None) != None and lineage[attr] <= i.get(f'{attr} >', None):
                             match = False
-                        if i.get(f'{attr} >=', None) and lineage[attr] < i.get(f'{attr} >=', None):
+                        if i.get(f'{attr} >=', None) != None and lineage[attr] < i.get(f'{attr} >=', None):
                             match = False
-                        if i.get(f'{attr} <', None) and lineage[attr] >= i.get(f'{attr} <', None):
+                        if i.get(f'{attr} <', None) != None and lineage[attr] >= i.get(f'{attr} <', None):
                             match = False
-                        if i.get(f'{attr} <=', None) and lineage[attr] > i.get(f'{attr} <=', None):
+                        if i.get(f'{attr} <=', None) != None and lineage[attr] > i.get(f'{attr} <=', None):
                             match = False
                     #if match, add to priority queue
                     if match:
@@ -864,7 +875,7 @@ class Ranking(object):
                         dist += abs(N[f'{attr} {NUMERIC_OPS[type(predicate)]}'] - i[f'{attr} {NUMERIC_OPS[type(predicate)]}']) / N[f'{attr} {NUMERIC_OPS[type(predicate)]}']
                 elif useful_method == UsefulMethod.MAX_ORIGINAL:
                     intersection = len(set(tuples).intersection(set(original['r'])))
-                    union = len(tuples) + len(original) - intersection
+                    union = len(tuples) + len(original['r']) - intersection
                     dist = 1 - (intersection/union)
                 elif useful_method == UsefulMethod.KENDALL_DISTANCE:
                     union = set(original['r']).union(set(tuples))

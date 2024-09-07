@@ -15,6 +15,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Law_Students",
         "dataset": "law_students",
+        "query_label": "data_size",
         "query": Query('law_students.csv', label='960'). \
             where(
             Condition('region_first', '=', 'GL'),
@@ -33,6 +34,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Law_Students-2MB",
         "dataset": "Law_Students-2MB",
+        "query_label": "data_size",
         "query": Query('synthesized/law/law_students_2mb.csv', label='2000'). \
             where(
             Condition('region_first', '=', 'GL'),
@@ -51,6 +53,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Law_Students-3MB",
         "dataset": "Law_Students-3MB",
+        "query_label": "data_size",
         "query": Query('synthesized/law/law_students_3mb.csv', label='3000'). \
             where(
             Condition('region_first', '=', 'GL'),
@@ -69,6 +72,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Law_Students-4MB",
         "dataset": "Law_Students-4MB",
+        "query_label": "data_size",
         "query": Query('synthesized/law/law_students_4mb.csv', label='4000'). \
             where(
             Condition('region_first', '=', 'GL'),
@@ -87,6 +91,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Law_Students-5MB",
         "dataset": "Law_Students-5MB",
+        "query_label": "data_size",
         "query": Query('synthesized/law/law_students_5mb.csv', label='5000'). \
             where(
             Condition('region_first', '=', 'GL'),

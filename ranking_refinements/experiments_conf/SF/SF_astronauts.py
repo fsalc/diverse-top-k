@@ -15,6 +15,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Astronauts",
         "dataset": "astronauts",
+        "query_label": "data_size",
         "query": Query('astronauts.csv', label='85'). \
             where(
             Condition('Graduate Major', '=', 'Physics'),
@@ -32,6 +33,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Astronauts-200KB",
         "dataset": "Astronauts-200KB",
+        "query_label": "data_size",
         "query": Query('synthesized/astronauts/astronauts_200kb.csv', label='200'). \
             where(
             Condition('Graduate Major', '=', 'Physics'),
@@ -49,6 +51,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Astronauts-300KB",
         "dataset": "Astronauts-300KB",
+        "query_label": "data_size",
         "query": Query('synthesized/astronauts/astronauts_300kb.csv', label='300'). \
             where(
             Condition('Graduate Major', '=', 'Physics'),
@@ -66,6 +69,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Astronauts-400KB",
         "dataset": "Astronauts-400KB",
+        "query_label": "data_size",
         "query": Query('synthesized/astronauts/astronauts_400kb.csv', label='400'). \
             where(
             Condition('Graduate Major', '=', 'Physics'),
@@ -83,6 +87,7 @@ EXPERIMENTS = [
     {
         "name": "SF_Astronauts-500KB",
         "dataset": "Astronauts-500KB",
+        "query_label": "data_size",
         "query": Query('synthesized/astronauts/astronauts_500kb.csv', label='500'). \
             where(
             Condition('Graduate Major', '=', 'Physics'),
