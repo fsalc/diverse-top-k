@@ -35,6 +35,7 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 
 ### ❸ Running experiments, generating figures, & recompiling the paper
 
+* Please ensure that the **Docker daemon is running** on the host machine before proceeding.
 * In order to run the experiments, generate plots, and recompile the paper, simply run (from this directory)
 ```shell
 make paper
