@@ -198,7 +198,7 @@ class Ranking(object):
             WHERE __group_rank <= {top}'''
 
     # TODO: Use sqlglot builder for this
-    def orig_ranked(self, attrs=None, top=None, opt=True):
+    def orig_ranked(self, select=['*'], attrs=None, top=None, opt=True):
         # for tpch
         # TODO: refactor
         def isnumeric(string):
@@ -217,9 +217,10 @@ class Ranking(object):
                     WHERE {quotedRenamed} ORDER BY __rank LIMIT {top}'''
             ).fetchnumpy()['r'])
 
-        q = sqlglot.select('*').from_(self.from_).order_by(self.utility)
+        q = sqlglot.select(*[f'"{s}"' if '.' not in s else f'{s} AS "{s}"' for s in select]).from_(self.from_).order_by(self.utility)
         for join in self.joins:
             q = q.join(join)
+
         return list(d.sql(
             sqlglot.subquery(
                 sqlglot.subquery(q).select(
@@ -235,7 +236,7 @@ class Ranking(object):
             ).fetchnumpy().items()}
             return self.cached
         
-        sq = sqlglot.select('*').from_(self.from_).order_by(self.utility)
+        sq = sqlglot.select(*[f'"{s}"' if '.' not in s else f'{s} AS "{s}"' for s in select]).from_(self.from_).order_by(self.utility)
         for join in self.joins:
             sq = sq.join(join)
         q = sqlglot.subquery(sq).select('*').select('ROW_NUMBER() OVER () - 1 AS r')
@@ -263,7 +264,7 @@ class Ranking(object):
                         SELECT * FROM ({self.top_k_of_groups_query(select=attrs.union({g.attr}), attrs=attrs, top=top)}) WHERE "{g.attr}" == \'{g.val}\''''       
                 ).fetchnumpy()['r'])
 
-            q = sqlglot.select('*').from_(self.from_).order_by(self.utility)
+            q = sqlglot.select(*[f'"{s}"' if '.' not in s else f'{s} AS "{s}"' for s in attrs]).from_(self.from_).order_by(self.utility)
             for join in self.joins:
                 q.join(join)
 
@@ -290,7 +291,7 @@ class Ranking(object):
             relevant_attrs = list(protected.union(attrs))
 
             all_ranked = self.all_ranked(select=relevant_attrs, attrs=attrs, top=p_star, opt=opt)
-            orig_ranked = self.orig_ranked(attrs=attrs, top=p_star, opt=opt)
+            orig_ranked = self.orig_ranked(select=relevant_attrs, attrs=attrs, top=p_star, opt=opt)
             domains = {attr: self.domain(attr) for attr in set(attrs).difference(protected)}
             cardinality = len(all_ranked[list(all_ranked.keys())[0]])
             print('card', cardinality)
@@ -436,7 +437,6 @@ class Ranking(object):
                     else:
                         problem += s[t] == LpAffineExpression(terms + [(r[t], -cardinality - 1)], constant=cardinality+1)
                     terms.append((r[t], 1))
-                    print(t)
 
             # Evaluate provenance annotation for numerical variables to 1 if refined predicate includes it
             # TODO: Double check these, make sure they admit only and all values that they should
