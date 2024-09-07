@@ -1,5 +1,5 @@
 # CPLEX
-FROM python:3.9 AS cplex
+FROM --platform=linux/amd64 python:3.9 AS cplex
 
 COPY docker-utils/cplex_studio2211.linux_x86_64.bin /cplex/cplex_studio2211.linux_x86_64.bin
 COPY docker-utils/response.properties /cplex/response.properties
@@ -11,7 +11,7 @@ RUN /cplex/cplex_studio2211.linux_x86_64.bin -f /cplex/response.properties
 RUN rm -rf /cplex
 
 # Rodeo
-FROM python:3.9 AS rodeo
+FROM --platform=linux/amd64 python:3.9 AS rodeo
 COPY --from=cplex /opt/cplex /opt/cplex
 
 # CPLEX bindings
