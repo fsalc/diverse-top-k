@@ -10,6 +10,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - RUN_ALL=TRUE
+      - RUN_ALGORITHM=FALSE
+      - RUN_CONSTRAINT_BOUNDS=FALSE
+      - RUN_CONSTRAINTS_NUMBER=FALSE
+      - RUN_K_STAR=FALSE
+      - RUN_EPSILON=FALSE
+      - RUN_PREDICATE_TYPE=FALSE
+      - RUN_DATA_SIZE=FALSE
     volumes:
       - ./figures:/ranking_refinements/ranking_refinements/figures
       - ./results:/ranking_refinements/ranking_refinements/experiments
