@@ -30,6 +30,8 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 ### ❷ Datasets
 
 * Some of the datasets are too large to store in this repository. A link will be provided here shortly, or please contact us.
+* Unzip the data archive file `data.zip`, and place the `data` directory in the [ranking_refinements](ranking_refinements) directory
+    - *Note*: Some of the datasets included in the data archive file are tracked in the repository -- overwriting the contents of the `data` directory with the one extracted from `data.zip` is okay.
 
 ### ❸ Running experiments, generating figures, & recompiling the paper
 
