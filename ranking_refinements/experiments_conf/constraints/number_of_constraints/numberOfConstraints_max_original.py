@@ -211,5 +211,5 @@ if __name__ == '__main__':
 
     runner = ExperimentsRunner(exprs, Path("experiments", 'number_of_constraints', 'max_original'),
                                [("total_duration[sec]", "algorithm"), ("deviation", "algorithm")],
-                               iterations=10)
+                               iterations=5)
     runner.run()
