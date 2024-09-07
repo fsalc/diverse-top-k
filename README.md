@@ -39,7 +39,7 @@ If there are any issues evaluating the reproducibility package or otherwise usin
 ```shell
 make paper
 ```
-* We expect that the full suite of experiments will take between 24-48 hours depending on hardware setup.
+* We expect that the full suite of experiments will take ~3-5 days depending on hardware setup.
 * The script runs *all* experiments from which *all data presented in each graph shown in the paper* was collected. 
 * The script will also automatically *generate new plots* from the collected data, and *recompile the paper* with the new figures included. If the script terminates successfully, the paper `main.pdf` should be placed into this directory.
 * If something goes wrong, please try `make clean && make paper` or feel free to contact us.
