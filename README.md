@@ -67,7 +67,7 @@ make clean
 
 * The technical details behind our algorithm may be found in our technical report, available at http://arxiv.org/abs/2403.17786
 * All of the source code for implementation is in `ranking_refinements` folder
-    * `fair.py` contains the key components of the implementation, and some example scenarios that may be run by evaluating the file
+    * [ranking_refinements/fair.py](ranking_refinements/fair.py) contains the key components of the implementation, and some example scenarios that may be run by evaluating the file
 
 ### Getting everything set up
 
@@ -80,7 +80,7 @@ make clean
 
 ### Running the algorithm
 
-* At the end of `fair.py`, there are a few example cases with various datasets
+* At the end of [ranking_refinements/fair.py](ranking_refinements/fair.py), there are a few example cases with various datasets
 * Let's look at one example scenario in order to illustrate the usage of our library:
 
 ```python
@@ -92,7 +92,12 @@ constraints = Constraints(
 )
 
 ranking = Ranking('SELECT * FROM "data/candidates.csv" WHERE ("Major" = \'CS\' OR Major = \'EE\') AND "Hours" >= 90 AND "Hours" <= 100 ORDER BY "Gpa" DESC')
+
+refinement, times = ranking.refine(constraints, max_deviation=0, debug=True, method=RefinementMethod.MILP_OPT, useful_method=UsefulMethod.QUERY_DISTANCE)
+print(refinement.conditions)
 ```
+> [!TIP]
+> The quickest way to try refining a query is to edit one of the scenarios included at the bottom of [ranking_refinements/fair.py](ranking_refinements/fair.py), and then running `python fair.py` from inside the [ranking_refinements](ranking_refinements) directory.
 
 #### Constraints
 
