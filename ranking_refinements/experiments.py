@@ -137,6 +137,15 @@ class ExperimentsRunner:
                                         except TimeoutError:
                                             print('WARN\ttimeout exceeded')
                                             refinement, times = None, (0, 0, 3600)
+                                        except RuntimeError as e:
+                                            # It's possible that the timeout will occur while a DuckDB query is running
+                                            # in which case the DuckDB driver will raise a RuntimeError with the message 'Query interrupted'
+                                            if str(e) == 'Query interrupted':
+                                                print('WARN\ttimeout exceeded')
+                                                refinement, times = None, (0, 0, 3600)
+                                            # Otherwise, this is some other RuntimeError that must be looked into
+                                            else:
+                                                raise e
                                         except MemoryError:
                                             print('WARN\tmemory limit exceeded')
                                             refinement, times = None, (0, 0, 3600)
