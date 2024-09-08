@@ -53,6 +53,13 @@ make paper
 * The queries, constraints, maximum average deviations $\varepsilon$, methods/algorithms, $k^*$, and other parameters may be controlled by these configuration files.
 * Adding a new experiment configuration file requires modifying [ranking_refinements/scripts/run_experiments.sh](ranking_refinements/scripts/run_experiments.sh) in order for it to be run with the suite.
 
+#### Running a single set of experiments
+
+* It is possible to run one set of experiments instead of running the whole suite.
+    - This is helpful in case any changes are made to the experiment configuration files, or in the case that an experiment needs to be rerun for other reasons (e.g. an unexpected runtime issue).
+* Running `make help` from this directory will show the sets of experiments that are available to run individually.
+* After running any experiment, running `make fix-paper` will recompile the paper without running the *full* suite of experiments.
+
 #### Clean-up
 
 * In the case you would like to clean everything up (e.g. starting a fresh run), simply run
