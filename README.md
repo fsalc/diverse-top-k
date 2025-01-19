@@ -119,7 +119,7 @@ print(refinement.conditions)
 #### Rankings
 
 * `Ranking` holds an SPJ query with (1) a WHERE clause and (2) an ORDER BY clause.
-    - An instance of `Ranking` is initialized with a SQL query (as a string)
+    - An instance of `Ranking` is initialized with an SQL query (as a string)
 
 #### Refinements
 
