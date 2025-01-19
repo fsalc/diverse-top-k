@@ -195,7 +195,7 @@ def plot_lines_duration_graph(index, y_setup, y_total, color_index, legend_prefi
               label=f'{legend_prefix}-Total', annotations=annotations, ax=ax)
 
 
-def plot_features(index, x_values, x_label, y_label, title, legend_loc='best', should_show_legend=True):
+def plot_features(index, x_values, x_label, y_label, title, legend_loc='best', should_show_legend=True, alternate_xlabels=False):
     if type(x_values) is not list and x_values.get('LowerBound'): x_values['LowerBound'] = 'Lower Bound'
     plt.xticks(index + BAR_WIDTH, x_values, fontweight='light', fontsize=36)
 
@@ -208,10 +208,11 @@ def plot_features(index, x_values, x_label, y_label, title, legend_loc='best', s
     plt.grid(True)
 
     # TODO: turn on automatically for relevant graphs
-    # ax = plt.gca()
-    # for i, l in enumerate(ax.xaxis.get_ticklabels(which='both')):
-    #     if i % 2 == 1:
-    #         l.set_visible(False)
+    if alternate_xlabels:
+        ax = plt.gca()
+        for i, l in enumerate(ax.xaxis.get_ticklabels(which='both')):
+            if i % 2 == 1:
+                l.set_visible(False)
 
     # plt.title(title)
 
@@ -412,7 +413,7 @@ STATISTICS = {
                          'statistics.csv'),
         }
     },
-    'predicate_type': {
+    'predicate_kind': {
         'JAC': {
             'Astr': Path('.', 'experiments', 'Predicate', 'max_original',
                          'Predicate_MO_Astronauts', 'statistics.csv'),
@@ -476,7 +477,7 @@ class GraphKind(Enum):
 
 GRAPH_KIND_TO_LABEL = {
     GraphKind.LINE: ['K', 'max_deviation', 'number_of_constraints'],
-    GraphKind.BAR: ['constraints_bounds', 'predicate_type']
+    GraphKind.BAR: ['constraints_bounds', 'predicate_kind']
 }
 
 
@@ -509,7 +510,8 @@ def plot_duration_for_combined_useful_for_each_dataset(log_scale=False):
                                             gap_number=plot_number)
             if index is None:
                 continue
-            plot_features(index, x, READABLE_LABLES[x_label], 'Duration [sec]', f'duration = f({x_label}), {dataset_sign}', should_show_legend=should_show_legend)
+            alternate_xlabels = True if x_label == 'max_deviation' or x_label == 'K' else False
+            plot_features(index, x, READABLE_LABLES[x_label], 'Duration [sec]', f'duration = f({x_label}), {dataset_sign}', should_show_legend=should_show_legend, alternate_xlabels=alternate_xlabels)
             should_show_legend = False
 
             combined_output_dir = Path(OUTPUT_DIR, 'combined_useful_by_dataset')
@@ -555,7 +557,7 @@ READABLE_LABLES = {
     'max_deviation': 'Maximum deviation ($\\varepsilon$)',
     'number_of_constraints': 'Number of Constraints',
     'constraints_bounds': 'Types of Constraints',
-    'predicate_type': 'Type of Predicates',
+    'predicate_kind': 'Type of Predicates',
     'duration[sec]': 'Duration [sec]'
 }
 
@@ -731,8 +733,9 @@ def plot_data_size_comparison_per_useful(log_scale=False):
             # plot_bar_duration_graph(index, y_setup, y_solver, color_index, useful_method, width=0.1)
             count_bars += 1
 
+        alternate_xlabels = True if dataset_sign == 'TPC-H' else False
         plot_features(index, [f'{s}\n{l}' for s, l in zip(x, lineage_classes)], f'Data Size [{unit}]\nLineage Classes', 'Duration [sec]',
-                        f'duration = f({x_label}), {dataset_sign}', legend_loc='upper left', should_show_legend=should_show_legend)
+                        f'duration = f({x_label}), {dataset_sign}', legend_loc='upper left', should_show_legend=should_show_legend, alternate_xlabels=alternate_xlabels)
         should_show_legend = False
 
         output_dir = Path(OUTPUT_DIR, 'data_size')
